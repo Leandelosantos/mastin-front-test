@@ -28,7 +28,7 @@ const WrapperProduct = styled.div`
   }
 `;
 
-const WrapperButton = styled.button`
+export const WrapperButton = styled.button`
   border: none;
   background: white;
   cursor: pointer;
@@ -67,7 +67,6 @@ export const Producto = () => {
       <Collapse in={isOpen}>
         <WrapperCollapse id="collapse-text">
           <DataProduct />
-          <div>hola</div>
         </WrapperCollapse>
       </Collapse>
     </>
