@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Navbar, Producto } from "./index.js";
+import { Navbar, Producto } from "./index";
 
 const Title = styled.h1`
   width: 100%;

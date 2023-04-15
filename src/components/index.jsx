@@ -1,9 +1,9 @@
 /* Archivo de barrido */
 
 /* Components */
-
+import Empresa from "./Empresa";
 export * from "./Home";
-export * from "./Empresa";
+
 export * from "./Catalogo";
 export * from "./Contacto";
 export * from "./Navbar";
@@ -20,3 +20,5 @@ export * from "./ButtonPlus";
 export * from "./Politicas";
 export * from "./Producto";
 export * from "./DataProduct";
+
+export { Empresa };
