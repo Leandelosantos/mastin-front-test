@@ -67,6 +67,7 @@ export const Producto = () => {
       <Collapse in={isOpen}>
         <WrapperCollapse id="collapse-text">
           <DataProduct />
+          <div>hola</div>
         </WrapperCollapse>
       </Collapse>
     </>
