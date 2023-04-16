@@ -1,16 +1,13 @@
-import { Header2 } from "..";
 import {
-  Navbar,
   Slider,
-  ButtonPlus,
   Politicas,
-  Footer,
   Imagen,
+  Header,
 } from "../index";
 import Collapse from "react-bootstrap/esm/Collapse";
 import plusIcon from "../../assets/img/plus-icon-red.png";
 import minusIcon from "../../assets/img/minus-icon-lightblue.png";
-import { WrapperButton } from "..";
+import { WrapperButton } from "../Producto/Producto";
 import { memo, useState } from "react";
 import { WrapperHistory, Wrapper } from "./components";
 
@@ -19,12 +16,8 @@ const Empresa = () => {
 
   return (
     <>
-      <Navbar />
       <Slider />
-      <Header2>
-        Contamos con el mejor equipo de profesionales para atender todas sus
-        consultas
-      </Header2>
+      <Header text={"Contamos con el mejor equipo de profesionales para atender todas sus consultas"} />
       <WrapperHistory id="collapse-text">
         <p>
           Registrada en Julio de 1973 por Francisco Maio como Mas-Tin S.A. en
@@ -73,7 +66,6 @@ const Empresa = () => {
         </div>
       </Wrapper>
       <Politicas />
-      <Footer />
     </>
   );
 };

@@ -1,24 +1,42 @@
 /* Archivo de barrido */
 
-/* Components */
+/* Componentes Pagina*/
 import Empresa from "./Empresa";
-export * from "./Home";
+import Home from "./Home";
+import Catalogo from "./Catalogo";
+import Contacto from "./Contacto";
 
-export * from "./Catalogo";
-export * from "./Contacto";
-export * from "./Navbar";
-export * from "./Footer";
+/* Componentes de Construcción*/
+import ButtonPlus from "./ButtonPlus";
+import Header from "./Header";
+import DataProduct from "./DataProduct";
+import DescEmpresa from "./DescEmpresa";
+import FinalHome from "./FinalHome";
+import Footer from "./Footer";
+import Frames from "./Frames";
+import Imagen from "./Imagen";
+import LinksMenu from "./LinksMenu";
+import Navbar from "./Navbar";
+import Politicas from "./Politicas";
+import Producto from "./Producto";
+import Slider from "./Slider";
 
-/* Helpers Components */
-export * from "./Imagen";
-export * from "./LinksMenu";
-export * from "./Slider";
-export * from "./Frames";
-export * from "./DescEmpresa";
-export * from "./FinalHome";
-export * from "./ButtonPlus";
-export * from "./Politicas";
-export * from "./Producto";
-export * from "./DataProduct";
-
-export { Empresa };
+export {
+  Empresa,
+  ButtonPlus,
+  Home,
+  Header,
+  Catalogo,
+  Contacto,
+  DataProduct,
+  DescEmpresa,
+  FinalHome,
+  Footer,
+  Frames,
+  Imagen,
+  LinksMenu,
+  Navbar,
+  Politicas,
+  Producto,
+  Slider,
+};
