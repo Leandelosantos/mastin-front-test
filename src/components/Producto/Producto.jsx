@@ -3,7 +3,6 @@ import Collapse from "react-bootstrap/esm/Collapse";
 import { useState, memo } from "react";
 import plusIcon from "../../assets/img/plus-icon-red.png";
 import minusIcon from "../../assets/img/minus-icon-lightblue.png";
-import { memo } from "react";
 import { WrapperProduct, WrapperCollapse, WrapperButton } from "./components";
 
 const Producto = ({ item }) => {
