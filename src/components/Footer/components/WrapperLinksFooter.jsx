@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { WrapperLinks } from "../../LinksMenu/LinksMenu";
+import WrapperLinks from "./WrapperLinks";
 
 const WrapperLinksFooter = styled(WrapperLinks)`
   font-family: "Inter";

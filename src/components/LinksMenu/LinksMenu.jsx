@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { memo } from "react";
-import { Dropdown } from "./components";
+import WrapperLinks from "./components";
 
-export const WrapperLinks = styled.div`
+/* export const WrapperLinks = styled.div`
   display: flex;
   justify-content: space-between;
   a {
@@ -16,7 +16,7 @@ export const WrapperLinks = styled.div`
   li {
     color: #595959;
   }
-`;
+`; */
 
 const LinksMenu = () => {
   return (
