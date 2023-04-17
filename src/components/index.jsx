@@ -20,6 +20,7 @@ import Navbar from "./Navbar";
 import Politicas from "./Politicas";
 import Producto from "./Producto";
 import Slider from "./Slider";
+import MainContainer from "./MainContainer";
 
 export {
   Empresa,
@@ -39,4 +40,5 @@ export {
   Politicas,
   Producto,
   Slider,
+  MainContainer,
 };

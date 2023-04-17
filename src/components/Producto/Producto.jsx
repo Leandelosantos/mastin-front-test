@@ -12,14 +12,14 @@ export const WrapperButton = styled.button`
   cursor: pointer;
 `;
 
-const Producto = () => {
+const Producto = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false);
   
   return (
     <>
       <WrapperProduct>
         <div className="product">
-          <p>Nombre del producto</p>
+          <p>{item.PRODUCTO}</p>
           <WrapperButton
             onClick={() => setIsOpen(!isOpen)}
             aria-controls="collapse-text"
@@ -35,7 +35,7 @@ const Producto = () => {
       </WrapperProduct>
       <Collapse in={isOpen}>
         <WrapperCollapse id="collapse-text">
-          <DataProduct />
+          <DataProduct item={item} />
         </WrapperCollapse>
       </Collapse>
     </>
