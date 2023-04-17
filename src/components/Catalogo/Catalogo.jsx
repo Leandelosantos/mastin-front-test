@@ -1,6 +1,6 @@
 import { memo, useContext } from "react";
 import { Producto } from "../index";
-import { Title } from "./components";
+import { Title, WrapperGrid } from "./components";
 import { AppContext } from "../../context/AppContext";
 
 const Catalogo = () => {
@@ -9,9 +9,11 @@ const Catalogo = () => {
   return (
     <>
       <Title>Catalogo</Title>
-      {items.map((item) => {
-        return (<Producto item={item} />);
-      })}
+      <WrapperGrid>
+        {items.map((item) => {
+          return <Producto item={item} />;
+        })}
+      </WrapperGrid>
     </>
   );
 };

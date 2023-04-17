@@ -7,7 +7,7 @@ import { WrapperProduct, WrapperCollapse, WrapperButton } from "./components";
 
 const Producto = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   return (
     <>
       <WrapperProduct>
