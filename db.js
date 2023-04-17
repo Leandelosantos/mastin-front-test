@@ -4,7 +4,8 @@ import cors from "cors";
 
 const app = express();
 
-const db = mysql.createConnection({
+const db = mysql.createPool({
+  connectionLimit : 10,
   host: "185.213.81.154",
   user: "u404107037_mastin_user",
   password: "M4stinbbdd",
@@ -16,9 +17,19 @@ app.use(cors());
 
 app.get("/items", (req, res) => {
   const q = "SELECT * FROM Listado_Productos_2023";
-  db.query(q, (err, data) => {
-    if (err) return res.json(err);
-    return res.json(data);
+  db.getConnection((err, conn) => {
+    if (err) {
+      res.send("Error occured");
+    } else {
+      conn.query(q, (err, data) => {
+        if (err) {
+          res.send("Error occured");
+        } else {
+          res.send(data);
+        }
+        conn.release();
+      })
+    }
   });
 });
 

@@ -7,7 +7,7 @@ const MainContainer = ({ children }) => {
   console.log(items);
   const fetchItems = async () => {
     try {
-      const res = await axios.get("http://localhost:8800/items");
+      const res = await axios.get(`http://${window.location.hostname}:8800/items`);
       updateItems(res.data);
     } catch (err) {
       console.log(err);
