@@ -11,7 +11,7 @@ const DataProduct = ({ item }) => {
         </div>
         <div>
           <h2>PRESENTACION</h2>
-          <p>{item.PRESENTACION}</p>
+          <p>{item.PRESENTACI_N}</p>
         </div>
         <div>
           <h2>SEGMENTO</h2>

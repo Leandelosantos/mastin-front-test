@@ -15,11 +15,11 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/items", (req, res) => {
-    const q = "SELECT * FROM Listado_Productos_2023";
-    db.query(q, (err, data) => {
-        if (err) return res.json(err);
-        return res.json(data);
-    });
+  const q = "SELECT * FROM Listado_Productos_2023";
+  db.query(q, (err, data) => {
+    if (err) return res.json(err);
+    return res.json(data);
+  });
 });
 
 app.listen(8800, () => {
