@@ -9,7 +9,9 @@ const Footer = () => {
     <>
       <WrapperFooter>
         <div className="footerTop">
-          <Imagen src={logo} alt="logo mas-tin" width={130} />
+          <Link to={"/"}>
+            <Imagen src={logo} alt="logo mas-tin" width={130} />
+          </Link>
           <p>Un mundo de soluciones</p>
           <div className="footerBottom">
             <p>Teléfono</p>

@@ -1,17 +1,10 @@
-import styled from "styled-components";
 import { Imagen, DataProduct } from "../index";
 import Collapse from "react-bootstrap/esm/Collapse";
 import { useState } from "react";
 import plusIcon from "../../assets/img/plus-icon-red.png";
 import minusIcon from "../../assets/img/minus-icon-lightblue.png";
 import { memo } from "react";
-import { WrapperProduct, WrapperCollapse } from "./components";
-
-export const WrapperButton = styled.button`
-  border: none;
-  background: white;
-  cursor: pointer;
-`;
+import { WrapperProduct, WrapperCollapse, WrapperButton } from "./components";
 
 const Producto = () => {
   const [isOpen, setIsOpen] = useState(false);
