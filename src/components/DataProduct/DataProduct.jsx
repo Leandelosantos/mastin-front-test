@@ -1,21 +1,21 @@
 import { memo } from "react";
 import { Wrapper } from "./components";
 
-const DataProduct = () => {
+const DataProduct = ({ item }) => {
   return (
     <>
       <Wrapper>
         <div>
           <h2>DESCRIPCION</h2>
-          <p>Catalizador</p>
+          <p>{item.DESCRIPCION}</p>
         </div>
         <div>
           <h2>PRESENTACION</h2>
-          <p>Bidon x 20kg</p>
+          <p>{item.PRESENTACION}</p>
         </div>
         <div>
           <h2>SEGMENTO</h2>
-          <p>Industria</p>
+          <p>{item.SEGMENTO}</p>
         </div>
       </Wrapper>
     </>

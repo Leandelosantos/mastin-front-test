@@ -1,19 +1,18 @@
 import { Imagen, DataProduct } from "../index";
 import Collapse from "react-bootstrap/esm/Collapse";
-import { useState } from "react";
+import { useState, memo } from "react";
 import plusIcon from "../../assets/img/plus-icon-red.png";
 import minusIcon from "../../assets/img/minus-icon-lightblue.png";
-import { memo } from "react";
 import { WrapperProduct, WrapperCollapse, WrapperButton } from "./components";
 
-const Producto = () => {
+const Producto = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  
   return (
     <>
       <WrapperProduct>
         <div className="product">
-          <p>Nombre del producto</p>
+          <p>{item.PRODUCTO}</p>
           <WrapperButton
             onClick={() => setIsOpen(!isOpen)}
             aria-controls="collapse-text"
@@ -29,7 +28,7 @@ const Producto = () => {
       </WrapperProduct>
       <Collapse in={isOpen}>
         <WrapperCollapse id="collapse-text">
-          <DataProduct />
+          <DataProduct item={item} />
         </WrapperCollapse>
       </Collapse>
     </>
