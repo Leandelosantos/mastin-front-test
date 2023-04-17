@@ -3,7 +3,7 @@ import axios from "axios";
 import { AppContext } from "../../context/AppContext";
 
 const MainContainer = ({ children }) => {
-  const { updateItems } = useContext(AppContext);
+  const { items, updateItems } = useContext(AppContext);
 
   const fetchItems = async () => {
     try {
