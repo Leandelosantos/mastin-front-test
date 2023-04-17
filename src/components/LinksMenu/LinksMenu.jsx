@@ -1,22 +1,6 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 import { memo } from "react";
 import WrapperLinks from "./components";
-
-/* export const WrapperLinks = styled.div`
-  display: flex;
-  justify-content: space-between;
-  a {
-    text-decoration: none;
-    color: #595959;
-  }
-  a:hover {
-    font-weight: 600;
-  }
-  li {
-    color: #595959;
-  }
-`; */
 
 const LinksMenu = () => {
   return (
