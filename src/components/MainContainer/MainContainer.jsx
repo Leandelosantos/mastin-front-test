@@ -8,7 +8,7 @@ const MainContainer = ({ children }) => {
   const fetchItems = async () => {
     try {
       const res = await axios.get(
-        "https://mas-ac32ke0l5-leandelosantos.vercel.app:8800/items"
+        "https://mas-tin-prueba.vercel.app/:8800/items"
       );
       updateItems(res.data);
     } catch (err) {
