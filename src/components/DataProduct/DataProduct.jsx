@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { memo } from "react";
 import { Wrapper } from "./components";
 

@@ -1,4 +1,5 @@
 import WrapperHistory from "./WrapperHistory";
 import Wrapper from "./Wrapper";
+import WrapperButton from "./WrapperButton";
 
-export { WrapperHistory, Wrapper };
+export { WrapperHistory, Wrapper, WrapperButton };

@@ -1,3 +1,3 @@
-import Dropdown from "./Dropdown";
+import WrapperLinks from "./WrapperLinks";
 
-export { Dropdown };
+export default WrapperLinks;

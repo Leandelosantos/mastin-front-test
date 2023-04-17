@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import logo from "../../assets/img/logo-mas-tin.png";
 import { Imagen, LinksMenu } from "../index";
 import Hamburger from "hamburger-react";
