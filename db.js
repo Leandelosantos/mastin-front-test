@@ -1,8 +1,14 @@
 import express from "express";
+import http from "http";
 import mysql from "mysql";
 import cors from "cors";
 
 const app = express();
+const server = http.Server(app);
+
+server.listen(8800, () => {
+  console.log("Connected to backend");
+});
 
 const db = mysql.createPool({
   connectionLimit : 10,
@@ -33,6 +39,6 @@ app.get("/items", (req, res) => {
   });
 });
 
-app.listen(8800, () => {
-  console.log("Connected to backend");
-});
+// app.listen(8800, () => {
+//   console.log("Connected to backend");
+// });
