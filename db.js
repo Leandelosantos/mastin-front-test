@@ -12,7 +12,7 @@ server.listen(8800, () => {
 
 const db = mysql.createPool({
   connectionLimit: 10,
-  host: "185.213.81.154",
+  host: "sql727.main-hosting.eu",
   user: "u404107037_mastin_user",
   password: "M4stinbbdd",
   database: "u404107037_mastin",
