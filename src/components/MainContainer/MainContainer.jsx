@@ -5,21 +5,7 @@ import { AppContext } from "../../context/AppContext";
 const MainContainer = ({ children }) => {
   const { items, updateItems } = useContext(AppContext);
   console.log(items);
-
   const fetchItems = async () => {
-    const method = window.location.hostname === "localhost" ? "http" : "https";
-    try {
-      await axios
-        .get(`${method}://${window.location.hostname}:8800/items`)
-        .then((res) => {
-          updateItems(res.data);
-        });
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  /* const fetchItems = async () => {
     try {
       const method =
         window.location.hostname === "localhost" ? "http" : "https";
@@ -31,7 +17,7 @@ const MainContainer = ({ children }) => {
       console.log(err);
       console.log("fallo el get");
     }
-  }; */
+  };
 
   useEffect(() => {
     fetchItems();
