@@ -11,12 +11,14 @@ server.listen(8800, () => {
 });
 
 const db = mysql.createPool({
-  connectionLimit : 10,
+  connectionLimit: 10,
   host: "185.213.81.154",
   user: "u404107037_mastin_user",
   password: "M4stinbbdd",
   database: "u404107037_mastin",
 });
+
+console.log("creo el pull");
 
 app.use(express.json());
 app.use(cors());
@@ -26,15 +28,17 @@ app.get("/items", (req, res) => {
   db.getConnection((err, conn) => {
     if (err) {
       res.send("Error occured");
+      console.log("fallo getConnection");
     } else {
       conn.query(q, (err, data) => {
         if (err) {
           res.send("Error occured");
+          console.log("fallo query");
         } else {
           res.send(data);
         }
         conn.release();
-      })
+      });
     }
   });
 });
