@@ -7,7 +7,7 @@ const app = express();
 const server = http.Server(app);
 import { loadEnv } from 'vite';
 
-server.listen(8800, () => {
+server.listen(3306, () => {
   console.log("Connected to backend");
 });
 
@@ -19,6 +19,7 @@ const db = mysql.createPool({
   user: process.env.VITE_DB_USER,
   password: process.env.VITE_DB_PASSWORD,
   database: process.env.VITE_DB_DATABASE,
+  port: process.env.VITE_PORT,
 });
 
 console.log("creo el pool");
