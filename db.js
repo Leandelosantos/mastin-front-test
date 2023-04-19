@@ -5,20 +5,23 @@ import cors from "cors";
 
 const app = express();
 const server = http.Server(app);
+import { loadEnv } from 'vite';
 
 server.listen(8800, () => {
   console.log("Connected to backend");
 });
 
+process.env = {...process.env, ...loadEnv("", process.cwd())};
+
 const db = mysql.createPool({
   connectionLimit: 10,
-  host: "185.213.81.154",
-  user: "u404107037_mastin_user",
-  password: "M4stinbbdd",
-  database: "u404107037_mastin",
+  host: process.env.VITE_DB_HOST,
+  user: process.env.VITE_DB_USER,
+  password: process.env.VITE_DB_PASSWORD,
+  database: process.env.VITE_DB_DATABASE,
 });
 
-console.log("creo el pull");
+console.log("creo el pool");
 
 app.use(express.json());
 app.use(cors());
