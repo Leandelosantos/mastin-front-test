@@ -25,12 +25,14 @@ const Producto = ({ item }) => {
             )}
           </WrapperButton>
         </div>
+        <div className="collapse-container">
+          <Collapse in={isOpen}>
+            <WrapperCollapse id="collapse-text">
+              <DataProduct item={item} />
+            </WrapperCollapse>
+          </Collapse>
+        </div>
       </WrapperProduct>
-      <Collapse in={isOpen}>
-        <WrapperCollapse id="collapse-text">
-          <DataProduct item={item} />
-        </WrapperCollapse>
-      </Collapse>
     </>
   );
 };

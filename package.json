@@ -17,6 +17,7 @@
     "hamburger-react": "^2.5.0",
     "http": "^0.0.1-security",
     "mysql": "^2.18.1",
+    "node-fetch": "^3.3.1",
     "nodemon": "^2.0.22",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.3",
