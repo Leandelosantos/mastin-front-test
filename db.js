@@ -5,13 +5,13 @@ import cors from "cors";
 
 const app = express();
 const server = http.Server(app);
-import { loadEnv } from 'vite';
+import { loadEnv } from "vite";
 
-server.listen(3306, () => {
+process.env = { ...process.env, ...loadEnv("", process.cwd()) };
+
+server.listen(process.env.VITE_PORT, () => {
   console.log("Connected to backend");
 });
-
-process.env = {...process.env, ...loadEnv("", process.cwd())};
 
 const db = mysql.createPool({
   connectionLimit: 10,
