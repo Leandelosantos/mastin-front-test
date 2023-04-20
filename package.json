@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite & node ./src/db.js",
-    "start": "vite & nodemon ./src/db.js",
+    "dev": "vite & node db.js",
+    "start": "vite & nodemon db.js",
     "build": "vite build",
     "preview": "vite preview"
   },
