@@ -21,6 +21,14 @@ const WrapperProduct = styled.div`
     align-items: center;
     gap: 160px;
   }
+  .collapse-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin: 0 0 0 2%;
+  }
 `;
 
 export default WrapperProduct;

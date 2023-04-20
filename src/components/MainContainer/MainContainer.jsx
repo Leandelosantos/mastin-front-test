@@ -7,10 +7,15 @@ const MainContainer = ({ children }) => {
   console.log(items);
   const fetchItems = async () => {
     try {
-      const res = await axios.get("http://localhost:8800/items");
+      const method =
+        window.location.hostname === "localhost" ? "http" : "https";
+      const res = await axios.get(
+        `${method}://${window.location.hostname}:3306/items`
+      );
       updateItems(res.data);
     } catch (err) {
       console.log(err);
+      console.log("fallo el get");
     }
   };
 

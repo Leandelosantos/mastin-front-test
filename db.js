@@ -1,27 +1,52 @@
 import express from "express";
+import http from "http";
 import mysql from "mysql";
 import cors from "cors";
 
 const app = express();
+const server = http.Server(app);
+import { loadEnv } from "vite";
 
-const db = mysql.createConnection({
-  host: "185.213.81.154",
-  user: "u404107037_mastin_user",
-  password: "M4stinbbdd",
-  database: "u404107037_mastin",
+process.env = { ...process.env, ...loadEnv("", process.cwd()) };
+
+server.listen(process.env.VITE_PORT, () => {
+  console.log("Connected to backend");
 });
+
+const db = mysql.createPool({
+  connectionLimit: 10,
+  host: process.env.VITE_DB_HOST,
+  user: process.env.VITE_DB_USER,
+  password: process.env.VITE_DB_PASSWORD,
+  database: process.env.VITE_DB_DATABASE,
+  port: process.env.VITE_PORT,
+});
+
+console.log("creo el pool");
 
 app.use(express.json());
 app.use(cors());
 
 app.get("/items", (req, res) => {
   const q = "SELECT * FROM Listado_Productos_2023";
-  db.query(q, (err, data) => {
-    if (err) return res.json(err);
-    return res.json(data);
+  db.getConnection((err, conn) => {
+    if (err) {
+      res.send("Error occured");
+      console.log("fallo getConnection");
+    } else {
+      conn.query(q, (err, data) => {
+        if (err) {
+          res.send("Error occured");
+          console.log("fallo query");
+        } else {
+          res.send(data);
+        }
+        conn.release();
+      });
+    }
   });
 });
 
-app.listen(8800, () => {
-  console.log("Connected to backend");
-});
+// app.listen(8800, () => {
+//   console.log("Connected to backend");
+// });
