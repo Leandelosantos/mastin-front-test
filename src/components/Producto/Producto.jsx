@@ -9,31 +9,29 @@ const Producto = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
-      <WrapperProduct>
-        <div className="product">
-          <p>{item.PRODUCTO}</p>
-          <WrapperButton
-            onClick={() => setIsOpen(!isOpen)}
-            aria-controls="collapse-text"
-            aria-expanded={isOpen}
-          >
-            {isOpen ? (
-              <Imagen src={minusIcon} alt="icon" />
-            ) : (
-              <Imagen src={plusIcon} alt="icon" />
-            )}
-          </WrapperButton>
-        </div>
-        <div className="collapse-container">
-          <Collapse in={isOpen}>
-            <WrapperCollapse id="collapse-text">
-              <DataProduct item={item} />
-            </WrapperCollapse>
-          </Collapse>
-        </div>
-      </WrapperProduct>
-    </>
+    <WrapperProduct>
+      <div className="product">
+        <p>{item.PRODUCTO}</p>
+        <WrapperButton
+          onClick={() => setIsOpen(!isOpen)}
+          aria-controls="collapse-text"
+          aria-expanded={isOpen}
+        >
+          {isOpen ? (
+            <Imagen src={minusIcon} alt="icon" />
+          ) : (
+            <Imagen src={plusIcon} alt="icon" />
+          )}
+        </WrapperButton>
+      </div>
+      <div className="collapse-container">
+        <Collapse in={isOpen}>
+          <WrapperCollapse id="collapse-text">
+            <DataProduct item={item} />
+          </WrapperCollapse>
+        </Collapse>
+      </div>
+    </WrapperProduct>
   );
 };
 

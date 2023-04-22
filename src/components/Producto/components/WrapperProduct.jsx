@@ -12,7 +12,8 @@ const WrapperProduct = styled.div`
   line-height: 32px;
   color: #595959;
   width: 444px;
-  height: 114px;
+  min-height: 114px;
+  max-height: fit-content;
   border-bottom: 2px solid #d12e1d;
   margin: 0 1%;
   .product {
