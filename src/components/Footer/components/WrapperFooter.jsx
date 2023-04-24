@@ -5,8 +5,8 @@ const WrapperFooter = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 5%;
-  margin-top: 1%;
+  gap: 4%;
+  margin: 1% 0 0.5% 0;
 
   .footerTop {
     display: flex;
@@ -21,6 +21,7 @@ const WrapperFooter = styled.div`
     font-weight: 600;
     font-size: 12px;
     text-align: center;
+    margin-bottom: 6px;
   }
 
   .footerBottom {
@@ -29,7 +30,7 @@ const WrapperFooter = styled.div`
     align-items: flex-end;
     flex-flow: column nowrap;
     width: 100%;
-    margin: 10% auto;
+    margin: auto;
   }
   .footerBottom p {
     font-family: "Roboto Condensed";
@@ -38,6 +39,7 @@ const WrapperFooter = styled.div`
     font-size: 16px;
     text-align: center;
     color: #000000;
+    margin: 0;
   }
 `;
 
