@@ -5,6 +5,7 @@ import Empresa from "./Empresa";
 import Home from "./Home";
 import Catalogo from "./Catalogo";
 import Contacto from "./Contacto";
+import Segmento from "./Segmentos";
 
 /* Componentes de Construcción*/
 import ButtonPlus from "./ButtonPlus";
@@ -41,4 +42,5 @@ export {
   Producto,
   Slider,
   MainContainer,
+  Segmento,
 };

@@ -5,7 +5,7 @@ import { Imagen } from "../index";
 import imagen1 from "../../assets/img/imagen1.png";
 import { memo } from "react";
 
-const Slider = () => (
+const Slider = ({ imagenes }) => (
   <Swiper
     modules={[Autoplay]}
     autoplay={{ delay: 3000 }}
@@ -16,15 +16,21 @@ const Slider = () => (
     onSlideChange={() => console.log("slide change")}
     onSwiper={(swiper) => console.log(swiper)}
   >
-    <SwiperSlide>
-      <Imagen src={imagen1} alt={"slider1"} width={"auto"} />
+    {imagenes.map((img) => {
+      <SwiperSlide>
+        <Imagen src={img} alt={"slider1"} width={"auto"} />
+      </SwiperSlide>;
+    })}
+    {console.log(imagenes)}
+    {/* <SwiperSlide>
+      <Imagen src={imagenes} alt={"slider1"} width={"auto"} />
     </SwiperSlide>
     <SwiperSlide>
       <Imagen src={imagen1} alt={"slider2"} width={"auto"} />
     </SwiperSlide>
     <SwiperSlide>
       <Imagen src={imagen1} alt={"slider3"} width={"auto"} />
-    </SwiperSlide>
+    </SwiperSlide> */}
   </Swiper>
 );
 
