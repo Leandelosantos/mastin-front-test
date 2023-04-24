@@ -1,3 +1,9 @@
 import WrapperLinks from "./WrapperLinks";
+import DropdownLink from './DropdownLink';
+import Pointer from './Pointer';
 
-export default WrapperLinks;
+export {
+    WrapperLinks,
+    DropdownLink,
+    Pointer,
+};
