@@ -47,10 +47,7 @@ const Segmento = () => {
     <>
       <Slider
         imagenes={
-          (path === "/filtros" &&
-            filtrosImg.map((img) => {
-              return img;
-            })) ||
+          (path === "/filtros" && filtrosImg) ||
           (path === "/construccion" && construccionImg) ||
           (path === "/industria" && industriaImg)
         }

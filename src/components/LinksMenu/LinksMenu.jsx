@@ -16,13 +16,13 @@ const LinksMenu = () => {
               <Link to={"/catalogo"}>PRODUCTOS</Link>
             </div>
             <div className="dropdownElement">
-              <Link to={"/catalogo"}>FILTROS</Link>
+              <Link to={"/filtros"}>FILTROS</Link>
             </div>
             <div className="dropdownElement">
-              <Link to={"/catalogo"}>CONSTRUCCIÓN</Link>
+              <Link to={"/construccion"}>CONSTRUCCIÓN</Link>
             </div>
             <div className="dropdownElement">
-              <Link to={"/catalogo"}>INDUSTRIA</Link>
+              <Link to={"/industria"}>INDUSTRIA</Link>
             </div>
           </div>
         </div>
