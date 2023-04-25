@@ -10,13 +10,13 @@ const Frames = () => {
   return (
     <>
       <WrapperFrames>
-        <Link to={"/filtros"}>
+        <Link to={"segmento/filtros"}>
           <Imagen src={frame21} alt="filtros" />
         </Link>
-        <Link to={"/construccion"}>
+        <Link to={"segmento/construccion"}>
           <Imagen src={frame22} alt="construccion" />
         </Link>
-        <Link to={"/industria"}>
+        <Link to={"segmento/industria"}>
           <Imagen src={frame23} alt="industria" />
         </Link>
       </WrapperFrames>

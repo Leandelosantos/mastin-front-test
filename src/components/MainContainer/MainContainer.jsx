@@ -4,7 +4,7 @@ import { AppContext } from "../../context/AppContext";
 
 const MainContainer = ({ children }) => {
   const { items, updateItems } = useContext(AppContext);
-  // console.log(items);
+  console.log(items);
   const fetchItems = async () => {
     try {
       const method =
