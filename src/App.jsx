@@ -25,10 +25,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/empresa" element={<Empresa />} />
               <Route path="/catalogo" element={<Catalogo />} />
+              <Route path="/segmento/:categoria" element={<Segmento />} />
               <Route path="/contacto" element={<Contacto />} />
-              <Route path="/filtros" element={<Segmento />} />
-              <Route path="/construccion" element={<Segmento />} />
-              <Route path="/industria" element={<Segmento />} />
             </Routes>
             {/* Se agregar el Footer en App, de este modo es accesible y compartido por los componentes ruteados arriba */}
             <Footer />

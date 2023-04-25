@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const DropdownLink = styled(Link)`
+const DropdownLink = styled.span`
   float: left;
   overflow: hidden;
   display: block;

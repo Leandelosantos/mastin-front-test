@@ -1,66 +1,72 @@
-import { memo } from "react";
-import { Slider, Header } from "../index";
-import {
+import { memo, useContext, useState, useEffect } from "react";
+import { useParams } from 'react-router-dom';
+import { AppContext } from "../../context/AppContext";
+import { Slider, Header, Producto } from "../index";
+import { WrapperGrid } from "./components";
+import construccion001 from '../../assets/img/imagenes-mastin/Construccion001.jpg';
+import construccion002 from '../../assets/img/imagenes-mastin/Construccion002.jpg';
+import construccion003 from '../../assets/img/imagenes-mastin/Construccion003.jpg';
+import construccion004 from '../../assets/img/imagenes-mastin/Construccion004.jpg';
+
+import industria001 from '../../assets/img/imagenes-mastin/Industria001.jpg';
+import industria002 from '../../assets/img/imagenes-mastin/Industria002.jpg';
+import industria003 from '../../assets/img/imagenes-mastin/Industria003.jpg';
+import industria004 from '../../assets/img/imagenes-mastin/Industria004.jpg';
+
+import filtros001 from '../../assets/img/imagenes-mastin/Filtros001.jpg';
+import filtros002 from '../../assets/img/imagenes-mastin/Filtros002.jpg';
+import filtros003 from '../../assets/img/imagenes-mastin/Filtros003.jpg';
+import filtros005 from '../../assets/img/imagenes-mastin/Filtros005.jpg';
+
+
+const construccionImg = [
   construccion001,
   construccion002,
   construccion003,
   construccion004,
-  construccion005,
-  construccion006,
-  construccion007,
-  construccion008,
-  filtros001,
-  filtros002,
-  filtros003,
-  filtros005,
-  industria001,
-  industria002,
-  industria003,
-  industria004,
-} from "../../assets/img/imagenes-mastin/index";
+];
+
+const filtrosImg = [filtros001, filtros002, filtros003, filtros005];
+
+const industriaImg = [industria001, industria002, industria003, industria004];
 
 const Segmento = () => {
-  const path = window.location.pathname;
+  const { itemsFiltros, itemsIndustria, itemsConstruccion } = useContext(AppContext);
+  const [products, setProducts] = useState([]);
+  const [segmentImgs, setSegmentImgs] = useState([]);
+  const [segmentTitle, setSegmentTitle] = useState('');
 
-  const construccionImg = [
-    construccion001,
-    construccion002,
-    construccion003,
-    construccion004,
-    construccion005,
-    construccion006,
-    construccion007,
-    construccion008,
-  ];
+  const { categoria } = useParams();
 
-  const filtrosImg = [filtros001, filtros002, filtros003, filtros005];
-
-  const industriaImg = [industria001, industria002, industria003, industria004];
-
-  const mapImg = (arrImg) => {
-    arrImg.map((img) => {
-      return img;
-    });
-  };
+  useEffect(() => {
+    if (categoria === 'filtros') {
+      setProducts(itemsFiltros);
+      setSegmentTitle('Amplia gama de insumos para filtros');
+      setSegmentImgs(filtrosImg);
+    } else if (categoria === 'construccion') {
+      setProducts(itemsConstruccion);
+      setSegmentTitle('Materiales de alta calidad para el área de la construcción');
+      setSegmentImgs(construccionImg);
+    }else if (categoria === 'industria') {
+      setProducts(itemsIndustria);
+      setSegmentTitle('Ofrecemos soluciones en PU a la medida de su industria');
+      setSegmentImgs(industriaImg);
+    }
+  }, [categoria, itemsFiltros, itemsIndustria, itemsConstruccion]);
 
   return (
     <>
       <Slider
-        imagenes={
-          (path === "/filtros" && filtrosImg) ||
-          (path === "/construccion" && construccionImg) ||
-          (path === "/industria" && industriaImg)
-        }
+        imagenes={segmentImgs}
       />
       <Header
-        text={
-          (path === "/filtros" && "Amplia gama de insumos para filtros") ||
-          (path === "/construccion" &&
-            "Materiales de alta calidad para el área de la construcción") ||
-          (path === "/industria" &&
-            "Ofrecemos soluciones en PU a la medida de su industria")
-        }
+        text={segmentTitle}
       />
+      <WrapperGrid>
+        {products.map((product) => {
+          return <Producto item={product} key={product.PRODUCTO} />;
+        })}
+      </WrapperGrid>
     </>
   );
 };

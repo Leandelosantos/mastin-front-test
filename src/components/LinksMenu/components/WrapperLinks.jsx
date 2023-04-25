@@ -10,6 +10,13 @@ const WrapperLinks = styled.div`
   a:hover {
     font-weight: 600;
   }
+  span:hover {
+    font-weight: 600;
+  }
+  span {
+    color: #595959;
+    cursor: pointer;
+  }
   li {
     color: #595959;
   }
