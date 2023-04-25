@@ -10,9 +10,9 @@ const MenuContainer = styled.div`
   font-weight: 400;
   text-decoration: none;
 
-  @media (max-width: 1281px) {
-      display: none;
-    }
+  @media (max-width: 1280px) {
+    display: none;
+  }
 `;
 
 export default MenuContainer;
