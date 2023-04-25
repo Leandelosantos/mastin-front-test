@@ -7,7 +7,7 @@ const LinksMenu = () => {
     <WrapperLinks>
       <Link to={"/"}>INICIO</Link>
       <Link to={"/empresa"}>EMPRESA</Link>
-      <DropdownLink to={"/catalogo"}>
+      <DropdownLink>
         CATALOGO
         <div className="dropdown">
           <Pointer />
@@ -16,13 +16,13 @@ const LinksMenu = () => {
               <Link to={"/catalogo"}>PRODUCTOS</Link>
             </div>
             <div className="dropdownElement">
-              <Link to={"/catalogo"}>FILTROS</Link>
+              <Link to={"/segmento/filtros"}>FILTROS</Link>
             </div>
             <div className="dropdownElement">
-              <Link to={"/catalogo"}>CONSTRUCCIÓN</Link>
+              <Link to={"/segmento/construccion"}>CONSTRUCCIÓN</Link>
             </div>
             <div className="dropdownElement">
-              <Link to={"/catalogo"}>INDUSTRIA</Link>
+              <Link to={"/segmento/industria"}>INDUSTRIA</Link>
             </div>
           </div>
         </div>
