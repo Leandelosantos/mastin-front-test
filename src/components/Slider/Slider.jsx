@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Virtual } from "swiper";
+import { Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/virtual";
 import { Imagen } from "../index";
