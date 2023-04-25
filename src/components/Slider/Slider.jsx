@@ -19,7 +19,7 @@ const Slider = ({ imagenes }) => (
       onSwiper={(swiper) => console.log(swiper)}
     >
       {imagenes.map((img) => (
-        <SwiperSlide>
+        <SwiperSlide key={img}>
           <Imagen src={img} alt={"slider1"} width={"auto"} />
         </SwiperSlide>
       ))}
