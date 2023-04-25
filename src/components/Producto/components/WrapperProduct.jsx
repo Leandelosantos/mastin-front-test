@@ -18,9 +18,10 @@ const WrapperProduct = styled.div`
   margin: 0 1%;
   .product {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 160px;
+    width: 444px;
   }
   .collapse-container {
     display: flex;
