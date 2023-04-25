@@ -1,5 +1,8 @@
-import { memo } from "react";
-import { Slider, Header } from "../index";
+import { memo, useContext, useState, useEffect } from "react";
+import { useParams } from 'react-router-dom';
+import { AppContext } from "../../context/AppContext";
+import { Slider, Header, Producto } from "../index";
+import { WrapperGrid } from "./components";
 import {
   construccion001,
   construccion002,
@@ -19,51 +22,58 @@ import {
   industria004,
 } from "../../assets/img/imagenes-mastin/index";
 
+const construccionImg = [
+  construccion001,
+  construccion002,
+  construccion003,
+  construccion004,
+  construccion005,
+  construccion006,
+  construccion007,
+  construccion008,
+];
+
+const filtrosImg = [filtros001, filtros002, filtros003, filtros005];
+
+const industriaImg = [industria001, industria002, industria003, industria004];
+
 const Segmento = () => {
-  const path = window.location.pathname;
+  const { itemsFiltros, itemsIndustria, itemsConstruccion } = useContext(AppContext);
+  const [products, setProducts] = useState([]);
+  const [segmentImgs, setSegmentImgs] = useState([]);
+  const [segmentTitle, setSegmentTitle] = useState('');
 
-  const construccionImg = [
-    construccion001,
-    construccion002,
-    construccion003,
-    construccion004,
-    construccion005,
-    construccion006,
-    construccion007,
-    construccion008,
-  ];
+  const { categoria } = useParams();
 
-  const filtrosImg = [filtros001, filtros002, filtros003, filtros005];
-
-  const industriaImg = [industria001, industria002, industria003, industria004];
-
-  const mapImg = (arrImg) => {
-    arrImg.map((img) => {
-      return img;
-    });
-  };
+  useEffect(() => {
+    if (categoria === 'filtros') {
+      setProducts(itemsFiltros);
+      setSegmentTitle('Amplia gama de insumos para filtros');
+      setSegmentImgs(filtrosImg);
+    } else if (categoria === 'construccion') {
+      setProducts(itemsConstruccion);
+      setSegmentTitle('Materiales de alta calidad para el área de la construcción');
+      setSegmentImgs(construccionImg);
+    }else if (categoria === 'industria') {
+      setProducts(itemsIndustria);
+      setSegmentTitle('Ofrecemos soluciones en PU a la medida de su industria');
+      setSegmentImgs(industriaImg);
+    }
+  }, [categoria, itemsFiltros, itemsIndustria, itemsConstruccion]);
 
   return (
     <>
       <Slider
-        imagenes={
-          (path === "/filtros" &&
-            filtrosImg.map((img) => {
-              return img;
-            })) ||
-          (path === "/construccion" && construccionImg) ||
-          (path === "/industria" && industriaImg)
-        }
+        imagenes={segmentImgs}
       />
       <Header
-        text={
-          (path === "/filtros" && "Amplia gama de insumos para filtros") ||
-          (path === "/construccion" &&
-            "Materiales de alta calidad para el área de la construcción") ||
-          (path === "/industria" &&
-            "Ofrecemos soluciones en PU a la medida de su industria")
-        }
+        text={segmentTitle}
       />
+      <WrapperGrid>
+        {products.map((product) => {
+          return <Producto item={product} key={product.PRODUCTO} />;
+        })}
+      </WrapperGrid>
     </>
   );
 };
