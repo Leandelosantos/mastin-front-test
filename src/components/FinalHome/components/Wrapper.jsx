@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
-  width: 100%;
+  width: auto;
   padding: 5% 0;
   box-shadow: 0px 0px 6px 1px #bdbebe;
   filter: drop-shadow(0px 4px 4px #bdbebe);
@@ -33,6 +33,28 @@ const Wrapper = styled.div`
     font-size: 24px;
     line-height: 32px;
     text-align: center;
+  }
+  .brands {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 800px) {
+    .text h2 {
+      font-size: 60px;
+    }
+    .text p {
+      font-size: 20px;
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .text h2 {
+      font-size: 45px;
+    }
   }
 `;
 

@@ -34,16 +34,36 @@ const Navbar = () => {
           <div className="sideBar">
             <Hamburger toggled={isOpen} toggle={() => setOpen(!isOpen)} />
             <MobileLinks>
-              <Link to={"/"}>INICIO</Link>
-              <Link to={"/empresa"}>EMPRESA</Link>
+              <Link to={"/"} onClick={() => setOpen(!isOpen)}>
+                INICIO
+              </Link>
+              <Link to={"/empresa"} onClick={() => setOpen(!isOpen)}>
+                EMPRESA
+              </Link>
               <span>CATALOGO</span>
               <CategoriesLinks>
-                <Link to={"/catalogo"}>PRODUCTOS</Link>
-                <Link to={"/segmento/filtros"}>FILTROS</Link>
-                <Link to={"/segmento/construccion"}>CONSTRUCCIÓN</Link>
-                <Link to={"/segmento/industria"}>INDUSTRIA</Link>
+                <Link to={"/catalogo"} onClick={() => setOpen(!isOpen)}>
+                  PRODUCTOS
+                </Link>
+                <Link to={"/segmento/filtros"} onClick={() => setOpen(!isOpen)}>
+                  FILTROS
+                </Link>
+                <Link
+                  to={"/segmento/construccion"}
+                  onClick={() => setOpen(!isOpen)}
+                >
+                  CONSTRUCCIÓN
+                </Link>
+                <Link
+                  to={"/segmento/industria"}
+                  onClick={() => setOpen(!isOpen)}
+                >
+                  INDUSTRIA
+                </Link>
               </CategoriesLinks>
-              <Link to={"/contacto"}>CONTACTO</Link>
+              <Link to={"/contacto"} onClick={() => setOpen(!isOpen)}>
+                CONTACTO
+              </Link>
               <li>ESP | POR</li>
             </MobileLinks>
           </div>

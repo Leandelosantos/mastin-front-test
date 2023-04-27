@@ -5,8 +5,9 @@ const WrapperFrames = styled.div`
   justify-content: center;
   align-items: center;
   margin: 5% auto;
-  width: 100%;
-  gap: 1%;
+  width: auto;
+  flex-wrap: wrap;
+  gap: 30px;
 `;
 
 export default WrapperFrames;
