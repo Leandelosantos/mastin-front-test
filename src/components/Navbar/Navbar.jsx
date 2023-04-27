@@ -9,7 +9,7 @@ import {
   LogoContainer,
   MobileLinks,
   CategoriesLinks,
-} from "./components/index.js";
+} from "./components";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
