@@ -12,9 +12,9 @@ const FinalHome = () => {
           <h2>CONFIAN EN NOSOTROS</h2>
           <p>Con una amplia trayectoria estamos contentos de crecer juntos</p>
         </div>
-        <div>
-          <Imagen src={logoDow} alt="marca" />
-          <Imagen src={logoDow2} alt="marca" />
+        <div className="brands">
+          <Imagen src={logoDow} alt="marca" width={"auto"} />
+          <Imagen src={logoDow2} alt="marca" width={"auto"} />
         </div>
       </Wrapper>
     </>

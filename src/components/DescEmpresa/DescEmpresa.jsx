@@ -12,7 +12,7 @@ const DescEmpresa = () => {
           consultas
         </h2>
         <div className="secContainer">
-          <Imagen src={empleados} alt="empleados" />
+          <Imagen src={empleados} alt="empleados" width={"auto"} />
           <ul>
             <li>Desarrollo de productos a medida</li>
             <li>Amplio conocimiento en procesos productivos</li>

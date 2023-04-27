@@ -11,9 +11,13 @@ const WrapperHistory = styled.div`
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;
-    font-size: 16.6267px;
+    font-size: 16px;
     line-height: 25px;
     color: #595959;
+  }
+
+  @media (max-width: 800px) {
+    width: 90%;
   }
 `;
 export default WrapperHistory;

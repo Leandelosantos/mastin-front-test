@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 const WrapperPolitics = styled.div`
   display: flex;
-  height: 375px;
+  height: auto;
+  padding: 2% 0;
   width: auto;
   margin: auto;
   background-color: #77cae7;
@@ -46,7 +47,17 @@ const WrapperPolitics = styled.div`
     font-size: 16px;
     line-height: 24px;
   }
-`;
 
+  @media (max-width: 600px) {
+    flex-flow: column wrap;
+
+    .column1 {
+      margin: 0 10%;
+    }
+    .column2 {
+      margin: 0 10%;
+    }
+  }
+`;
 
 export default WrapperPolitics;

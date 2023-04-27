@@ -36,6 +36,38 @@ const WrapperContact = styled.div`
     border: 0;
     margin: 2% 0;
   }
+
+  @media (max-width: 1600px) {
+    .country iframe {
+      width: 600px;
+      height: 400px;
+    }
+  }
+  @media (max-width: 1200px) {
+    .country iframe {
+      width: 400px;
+      height: 400px;
+    }
+  }
+  @media (max-width: 800px) {
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .country {
+      width: auto;
+      margin: 3%;
+    }
+    .country iframe {
+      width: 600px;
+      height: 600px;
+    }
+  }
+  @media (max-width: 600px) {
+    .country iframe {
+      width: 460px;
+      height: 460px;
+    }
+  }
 `;
 
 export default WrapperContact;

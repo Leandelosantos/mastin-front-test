@@ -4,9 +4,10 @@ const WrapperFooter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: auto;
   gap: 4%;
   margin: 1% 0 0.5% 0;
+  flex-wrap: wrap;
 
   .footerTop {
     display: flex;

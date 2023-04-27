@@ -1,9 +1,14 @@
-import { Slider, Politicas, Imagen, Header } from "../index";
+import { Slider, Politicas, Imagen } from "../index";
 import Collapse from "react-bootstrap/esm/Collapse";
 import plusIcon from "../../assets/img/plus-icon-red.png";
 import minusIcon from "../../assets/img/minus-icon-lightblue.png";
 import { memo, useState } from "react";
-import { WrapperHistory, Wrapper, WrapperButton } from "./components";
+import {
+  WrapperHistory,
+  Wrapper,
+  WrapperButton,
+  HeaderEmpresa,
+} from "./components";
 import slide1 from "../../assets/img/imagenes-mastin/construccion-empresa.png";
 import slide2 from "../../assets/img/imagenes-mastin/Construccion003.jpg";
 import slide3 from "../../assets/img/imagenes-mastin/Filtros003.jpg";
@@ -17,7 +22,7 @@ const Empresa = () => {
   return (
     <>
       <Slider imagenes={imgEmpresa} />
-      <Header
+      <HeaderEmpresa
         text={
           "Contamos con el mejor equipo de profesionales para atender todas sus consultas"
         }

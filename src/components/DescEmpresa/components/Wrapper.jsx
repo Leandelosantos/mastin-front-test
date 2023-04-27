@@ -4,10 +4,10 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   margin: auto;
-  width: 100%;
-  height: 620px;
+  width: auto;
+  height: auto;
   background-image: repeating-linear-gradient(
     45deg,
     rgba(189, 191, 191, 0.22) 0,
@@ -40,6 +40,9 @@ const Wrapper = styled.div`
     gap: 10%;
   }
   .secContainer ul {
+    display: flex;
+    width: auto;
+    flex-flow: column wrap;
     margin-top: 5%;
   }
   .secContainer ul li {
@@ -49,6 +52,38 @@ const Wrapper = styled.div`
     font-size: 24px;
     line-height: 32px;
     color: #595959;
+  }
+
+  @media (max-width: 800px) {
+    h2 {
+      width: auto;
+      font-size: 40px;
+      margin: 6% auto;
+      line-height: 43px;
+    }
+
+    .secContainer {
+      flex-flow: column wrap;
+      width: auto;
+      gap: 30px;
+    }
+  }
+  @media (max-width: 600px) {
+    h2 {
+      font-size: 30px;
+      line-height: 35px;
+    }
+    .secContainer img {
+      width: 70%;
+    }
+    .secContainer ul li {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 480px) {
+    .secContainer ul li {
+      font-size: 18px;
+    }
   }
 `;
 
