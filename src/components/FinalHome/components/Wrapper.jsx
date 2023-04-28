@@ -42,6 +42,7 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: 800px) {
+    padding: 5% 4%;
     .text h2 {
       font-size: 60px;
     }

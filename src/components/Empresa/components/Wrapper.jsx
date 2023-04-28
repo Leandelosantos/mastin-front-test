@@ -7,7 +7,8 @@ const Wrapper = styled.div`
   flex-flow: column nowrap;
   margin: auto;
   width: 100%;
-  height: 580px;
+  height: auto;
+  padding: 2% 0;
   background-image: repeating-linear-gradient(
     45deg,
     rgba(189, 191, 191, 0.22) 0,

@@ -40,7 +40,7 @@ const Empresa = () => {
           compañía junto al respeto por nuestros colaboradores, proveedores y
           clientes, y el cuidado del medio ambiente.
         </p>
-        <WrapperButton
+        {/* <WrapperButton
           onClick={() => setIsOpen(!isOpen)}
           aria-controls="collapse-text"
           aria-expanded={isOpen}
@@ -50,7 +50,7 @@ const Empresa = () => {
           ) : (
             <Imagen src={plusIcon} alt="icon" />
           )}
-        </WrapperButton>
+        </WrapperButton> */}
         <Collapse in={isOpen}>
           <p>
             Con los años, mas-tin se convirtió en una marca reconocida y comenzó
@@ -66,6 +66,17 @@ const Empresa = () => {
             el mundo mas-tin, un mundo de soluciones.
           </p>
         </Collapse>
+        <WrapperButton
+          onClick={() => setIsOpen(!isOpen)}
+          aria-controls="collapse-text"
+          aria-expanded={isOpen}
+        >
+          {isOpen ? (
+            <Imagen src={minusIcon} alt="icon" />
+          ) : (
+            <Imagen src={plusIcon} alt="icon" />
+          )}
+        </WrapperButton>
       </WrapperHistory>
 
       <Wrapper>

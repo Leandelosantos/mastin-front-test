@@ -10,6 +10,7 @@ const HeaderComponent = styled.h2`
   font-weight: 300;
   font-family: "Roboto Condensed";
   font-size: 72px;
+  padding: 0 4%;
   line-height: 90px;
   text-align: center;
   color: #77cae7;
@@ -19,9 +20,14 @@ const HeaderComponent = styled.h2`
     width: auto;
   }
 
+  @media (max-width: 800px) {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
   @media (max-width: 600px) {
-    font-size: 60px;
-    line-height: 80px;
+    font-size: 40px;
+    line-height: 50px;
   }
   @media (max-width: 480px) {
     font-size: 50px;

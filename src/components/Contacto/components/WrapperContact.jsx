@@ -4,6 +4,7 @@ const WrapperContact = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  box-shadow: rgb(189, 190, 190) 0px 2px 6px 0px;
   .country {
     display: flex;
     width: 50%;
@@ -52,6 +53,8 @@ const WrapperContact = styled.div`
   @media (max-width: 800px) {
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
+    padding: 0 4%;
 
     .country {
       width: auto;
@@ -63,9 +66,19 @@ const WrapperContact = styled.div`
     }
   }
   @media (max-width: 600px) {
+    .country {
+      width: 100%;
+    }
     .country iframe {
       width: 460px;
       height: 460px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .country iframe {
+      width: 380px;
+      height: 400px;
     }
   }
 `;

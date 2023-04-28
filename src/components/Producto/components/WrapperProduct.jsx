@@ -31,6 +31,13 @@ const WrapperProduct = styled.div`
     height: auto;
     margin: 0 0 0 2%;
   }
+
+  @media (max-width: 800px) {
+    width: 100%;
+    .product {
+      width: 100%;
+    }
+  }
 `;
 
 export default WrapperProduct;

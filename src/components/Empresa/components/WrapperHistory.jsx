@@ -6,6 +6,7 @@ const WrapperHistory = styled.div`
   align-items: center;
   width: 60%;
   margin: auto;
+  padding: 0 4%;
   flex-flow: column nowrap;
   p {
     font-family: "Inter";
@@ -17,7 +18,7 @@ const WrapperHistory = styled.div`
   }
 
   @media (max-width: 800px) {
-    width: 90%;
+    width: 100%;
   }
 `;
 export default WrapperHistory;

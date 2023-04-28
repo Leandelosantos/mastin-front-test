@@ -50,12 +50,13 @@ const WrapperPolitics = styled.div`
 
   @media (max-width: 600px) {
     flex-flow: column wrap;
+    padding: 2% 4%;
 
     .column1 {
-      margin: 0 10%;
+      margin: auto;
     }
     .column2 {
-      margin: 0 10%;
+      margin: auto;
     }
   }
 `;

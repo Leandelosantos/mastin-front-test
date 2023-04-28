@@ -8,6 +8,10 @@ const WrapperFrames = styled.div`
   width: auto;
   flex-wrap: wrap;
   gap: 30px;
+
+  @media (max-width: 600px) {
+    margin: 5% 4%;
+  }
 `;
 
 export default WrapperFrames;

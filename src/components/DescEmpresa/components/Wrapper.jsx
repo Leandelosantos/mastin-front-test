@@ -6,8 +6,9 @@ const Wrapper = styled.div`
   align-items: center;
   flex-flow: column wrap;
   margin: auto;
-  width: auto;
+  width: 100%;
   height: auto;
+  padding: 2% 0;
   background-image: repeating-linear-gradient(
     45deg,
     rgba(189, 191, 191, 0.22) 0,
@@ -22,7 +23,7 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: start;
     width: 50%;
-    margin: 3% auto 0 auto;
+    margin: 0 auto;
     font-family: "Inter";
     font-style: normal;
     font-weight: 300;
@@ -69,8 +70,9 @@ const Wrapper = styled.div`
     }
   }
   @media (max-width: 600px) {
+    padding: 4%;
     h2 {
-      font-size: 30px;
+      font-size: 28px;
       line-height: 35px;
     }
     .secContainer img {
@@ -82,7 +84,7 @@ const Wrapper = styled.div`
   }
   @media (max-width: 480px) {
     .secContainer ul li {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 `;
