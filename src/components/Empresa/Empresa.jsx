@@ -13,6 +13,7 @@ import slide1 from "../../assets/img/imagenes-mastin/construccion-empresa.png";
 import slide2 from "../../assets/img/imagenes-mastin/Construccion003.jpg";
 import slide3 from "../../assets/img/imagenes-mastin/Filtros003.jpg";
 import slide4 from "../../assets/img/imagenes-mastin/Industria002.jpg";
+import presidenteImg from "../../assets/img/susana.png";
 
 const imgEmpresa = [slide1, slide2, slide3, slide4];
 
@@ -68,7 +69,13 @@ const Empresa = () => {
       </WrapperHistory>
 
       <Wrapper>
-        <div className="circle-red"></div>
+        <div className="circle-red">
+          <Imagen
+            src={presidenteImg}
+            alt={"Presidente"}
+            width={"100%"}
+          ></Imagen>
+        </div>
         <div className="president">
           <p>Susana Argüello de Maio</p>
           <p>Presidente</p>
