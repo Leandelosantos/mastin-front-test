@@ -8,6 +8,6 @@ export {
   WrapperNav,
   MenuContainer,
   LogoContainer,
-  MobileLinks,
   CategoriesLinks,
+  MobileLinks,
 };
