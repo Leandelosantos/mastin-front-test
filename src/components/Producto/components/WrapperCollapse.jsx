@@ -7,6 +7,10 @@ const WrapperCollapse = styled.div`
   width: 444px;
   height: auto;
   margin: 0 0 0 1%;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `;
 
 export default WrapperCollapse;

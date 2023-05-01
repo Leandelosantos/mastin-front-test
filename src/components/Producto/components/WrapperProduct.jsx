@@ -32,9 +32,12 @@ const WrapperProduct = styled.div`
     margin: 0 0 0 2%;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     width: 100%;
     .product {
+      width: 100%;
+    }
+    .collapse-container {
       width: 100%;
     }
   }

@@ -1,6 +1,6 @@
 import express from "express";
 import http from "http";
-import mysql from "mysql";
+import mysql from "mysql2";
 import cors from "cors";
 
 const app = express();
@@ -27,7 +27,7 @@ console.log("creo el pool");
 app.use(express.json());
 app.use(cors());
 
-app.get("/items", (req, res) => {
+app.get("/", (req, res) => {
   const q = "SELECT * FROM Listado_Productos_2023";
   db.getConnection((err, conn) => {
     if (err) {
