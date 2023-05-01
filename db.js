@@ -47,6 +47,6 @@ app.get("/", (req, res) => {
   });
 });
 
-// app.listen(8800, () => {
-//   console.log("Connected to backend");
-// });
+app.listen(3306, () => {
+  console.log("Connected to backend");
+});
