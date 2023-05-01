@@ -9,14 +9,12 @@ import {
   LogoContainer,
   MobileLinks,
   CategoriesLinks,
-} from "./components";
+} from "./components/index";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    // <header>
-    //   <nav>
     <WrapperNav>
       <LogoContainer>
         <Link to={"/"}>
@@ -70,8 +68,6 @@ const Navbar = () => {
         )}
       </div>
     </WrapperNav>
-    //   </nav>
-    // </header>
   );
 };
 
