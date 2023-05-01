@@ -9,10 +9,6 @@ import { loadEnv } from "vite";
 
 process.env = { ...process.env, ...loadEnv("", process.cwd()) };
 
-server.listen(process.env.VITE_PORT, () => {
-  console.log("Connected to backend");
-});
-
 const db = mysql.createPool({
   connectionLimit: 10,
   host: process.env.VITE_DB_HOST,
@@ -47,6 +43,10 @@ app.get("/", (req, res) => {
   });
 });
 
-app.listen(3306, () => {
+server.listen(process.env.VITE_PORT, () => {
   console.log("Connected to backend");
 });
+
+/* app.listen(3306, () => {
+  console.log("Connected to backend");
+}); */
