@@ -8,7 +8,7 @@ const MainContainer = ({ children }) => {
   const fetchItems = async () => {
     try {
       const method =
-        window.location.hostname === "localhost" ? "http" : "https";
+        window.location.hostname === "simplificando.ar" ? "http" : "https";
       const res = await axios.get(
         `${method}://${window.location.hostname}:8800`
       );
