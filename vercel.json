@@ -2,10 +2,10 @@
   "version": 2,
   "builds": [
     {
-      "src": "./db.js",
-      "use": "@vercel/node"
+      "buildCommand": "vite build"
     }
   ],
+
   "routes": [
     {
       "src": "/(.*)",
