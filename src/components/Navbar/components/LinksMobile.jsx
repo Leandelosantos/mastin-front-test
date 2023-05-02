@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const MobileLinks = styled.div`
+const LinksMobile = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 25px;
@@ -26,4 +26,4 @@ const MobileLinks = styled.div`
   }
 `;
 
-export default MobileLinks;
+export default LinksMobile;
