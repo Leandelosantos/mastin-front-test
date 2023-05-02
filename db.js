@@ -2,16 +2,10 @@ import express from "express";
 import http from "http";
 import mysql from "mysql2";
 import cors from "cors";
-
-const app = express();
-const server = http.Server(app);
 import { loadEnv } from "vite";
+const app = express();
 
 process.env = { ...process.env, ...loadEnv("", process.cwd()) };
-
-/* server.listen(process.env.VITE_PORT, () => {
-  console.log("Connected to backend");
-}); */
 
 const db = mysql.createPool({
   connectionLimit: 10,
@@ -27,7 +21,7 @@ console.log("creo el pool");
 app.use(express.json());
 app.use(cors());
 
-app.get("/items", (req, res) => {
+app.get("/", (req, res) => {
   const q = "SELECT * FROM Listado_Productos_2023";
   db.getConnection((err, conn) => {
     if (err) {
@@ -47,6 +41,7 @@ app.get("/items", (req, res) => {
   });
 });
 
-app.listen(8800, () => {
-  console.log("Connected to backend");
+const PORT = process.env.PORT || 8800;
+app.listen(PORT, () => {
+  console.log(`Connected to backend ${PORT}`);
 });
