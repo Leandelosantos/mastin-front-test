@@ -14,8 +14,8 @@ const Slider = ({ imagenes }) => (
       // width={"100%"}
       centeredSlides={true}
       slidesPerView={1}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
+      //onSlideChange={() => console.log("slide change")}
+      //onSwiper={(swiper) => console.log(swiper)}
     >
       {imagenes.map((img) => (
         <SwiperSlide key={img}>
