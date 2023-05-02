@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite & node db.js",
     "start": "vite & nodemon db.js",
-    "build": "vite build",
+    "build": "node db.js & vite build",
     "preview": "vite preview"
   },
   "dependencies": {

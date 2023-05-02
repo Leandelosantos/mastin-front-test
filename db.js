@@ -18,11 +18,6 @@ const db = mysql.createPool({
 
 console.log("creo el pool");
 
-const PORT = process.env.PORT || 8800;
-app.listen(PORT, () => {
-  console.log(`Connected to backend ${PORT}`);
-});
-
 app.use(express.json());
 app.use(cors());
 
@@ -44,4 +39,9 @@ app.get("/", (req, res) => {
       });
     }
   });
+});
+
+const PORT = process.env.PORT || 8800;
+app.listen(PORT, () => {
+  console.log(`Connected to backend ${PORT}`);
 });
