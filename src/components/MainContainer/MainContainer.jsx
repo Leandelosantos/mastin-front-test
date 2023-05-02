@@ -9,7 +9,7 @@ const MainContainer = ({ children }) => {
     try {
       //const method =
       //window.location.hostname === "localhost" ? "http" : "https";
-      const res = await axios.get(`https://${window.location.hostname}:8800`);
+      const res = await axios.get(`https://${process.env.VITE_DB_HOST}:8800`);
       updateItems(res.data);
     } catch (err) {
       console.error(err);
