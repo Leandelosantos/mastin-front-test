@@ -9,6 +9,10 @@ import { loadEnv } from "vite";
 
 process.env = { ...process.env, ...loadEnv("", process.cwd()) };
 
+/* server.listen(process.env.VITE_PORT, () => {
+  console.log("Connected to backend");
+}); */
+
 const db = mysql.createPool({
   connectionLimit: 10,
   host: process.env.VITE_DB_HOST,
@@ -23,7 +27,7 @@ console.log("creo el pool");
 app.use(express.json());
 app.use(cors());
 
-app.get("/", (req, res) => {
+app.get("/items", (req, res) => {
   const q = "SELECT * FROM Listado_Productos_2023";
   db.getConnection((err, conn) => {
     if (err) {
@@ -43,10 +47,6 @@ app.get("/", (req, res) => {
   });
 });
 
-server.listen(process.env.VITE_PORT, () => {
+app.listen(8800, () => {
   console.log("Connected to backend");
 });
-
-/* app.listen(3306, () => {
-  console.log("Connected to backend");
-}); */
