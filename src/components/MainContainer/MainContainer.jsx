@@ -10,7 +10,7 @@ const MainContainer = ({ children }) => {
       // const method = window.location.hostname ? "http" : "https";
       console.log(`${window.location.hostname}`);
       const res = await axios.get(
-        `https://${window.location.hostname}:3306/catalogo`
+        `https://${window.location.hostname}/catalogo`
       );
       console.log(res.data);
       updateItems(res.data);
