@@ -3,16 +3,16 @@ import axios from "axios";
 import { AppContext } from "../../context/AppContext";
 
 const MainContainer = ({ children }) => {
-  const { items, updateItems } = useContext(AppContext);
-  console.log(items);
+  const { updateItems } = useContext(AppContext);
+
   const fetchItems = async () => {
     try {
-      const method =
-        window.location.hostname === "localhost" ? "http" : "https";
-
+      const method = window.location.hostname ? "http" : "https";
+      console.log(`${window.location.hostname}`);
       const res = await axios.get(
-        `${method}://${window.location.hostname}:8800`
+        `${method}://${window.location.hostname}:3306/catalogo`
       );
+      console.log(res.data);
       updateItems(res.data);
     } catch (err) {
       console.error(err);

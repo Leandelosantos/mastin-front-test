@@ -21,7 +21,7 @@ console.log("creo el pool");
 app.use(express.json());
 app.use(cors());
 
-app.get("/", (req, res) => {
+app.get("/catalogo", (req, res) => {
   const q = "SELECT * FROM Listado_Productos_2023";
   db.getConnection((err, conn) => {
     if (err) {
@@ -41,7 +41,8 @@ app.get("/", (req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 8800;
+const PORT = process.env.VITE_PORT;
+console.log(process.env.VITE_PORT);
 app.listen(PORT, () => {
   console.log(`Connected to backend ${PORT}`);
 });
