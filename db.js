@@ -2,10 +2,10 @@ import express from "express";
 import http from "http";
 import mysql from "mysql2";
 import cors from "cors";
-//import { loadEnv } from "vite";
+import { loadEnv } from "vite";
 const app = express();
 
-//process.env = { ...process.env, ...loadEnv("", process.cwd()) };
+process.env = { ...process.env, ...loadEnv("", process.cwd()) };
 
 const db = mysql.createPool({
   connectionLimit: 10,
@@ -21,7 +21,7 @@ console.log("creo el pool");
 app.use(express.json());
 app.use(cors());
 
-app.get("/catalogo", (req, res) => {
+app.get("/", (req, res) => {
   const q = "SELECT * FROM Listado_Productos_2023";
   db.getConnection((err, conn) => {
     if (err) {

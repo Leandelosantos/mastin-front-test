@@ -11,7 +11,7 @@ const MainContainer = ({ children }) => {
         window.location.hostname === "localhost" ? "http" : "https";
 
       const res = await axios.get(
-        `${method}://${window.location.hostname}:8800/catalogo`
+        `${method}://${window.location.hostname}:8800`
       );
       updateItems(res.data);
     } catch (err) {
