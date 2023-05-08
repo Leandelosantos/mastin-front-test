@@ -10,7 +10,7 @@ const Contacto = () => {
           <p>Dirección: Calle 24 (Anastasio Lanz) 2890.</p>
           <p>Mini Parque Industrial Vergara, Berazategui.</p>
           <p>CP1884, Buenos Aires, Argentina.</p>
-          <p>Teléfono: +54(11)4256-1331</p>
+          <p>Teléfono: +54 (11) 2120-7200</p>
           <p>Lunes a Viernes de 8 a 17 hs</p>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.934894010499!2d-58.224304584289456!3d-34.782414280413526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a328c521f03719%3A0xa14649dc34bcd400!2sMas-Tin%20SA!5e0!3m2!1ses!2sar!4v1681164680939!5m2!1ses!2sar"

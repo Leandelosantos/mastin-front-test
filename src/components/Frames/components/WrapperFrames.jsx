@@ -7,7 +7,7 @@ const WrapperFrames = styled.div`
   margin: 5% auto;
   width: auto;
   flex-wrap: nowrap;
-  padding: 0 4%;
+  padding: 0 5%;
   gap: 30px;
 
   @media (max-width: 900px) {

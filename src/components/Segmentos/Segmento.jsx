@@ -3,33 +3,33 @@ import { useParams } from "react-router-dom";
 import { AppContext } from "../../context/AppContext";
 import { Slider, Header, Producto } from "../index";
 import { WrapperGrid } from "./components";
-import construccion001 from "../../assets/img/imagenes-mastin/construccion-slider.png";
-import construccion002 from "../../assets/img/imagenes-mastin/Construccion002.jpg";
+//import construccion001 from "../../assets/img/imagenes-mastin/construccion-slider.png";
 import construccion003 from "../../assets/img/imagenes-mastin/Construccion003.jpg";
+import construccion002 from "../../assets/img/imagenes-mastin/Construccion002.jpg";
 import construccion004 from "../../assets/img/imagenes-mastin/Construccion004.jpg";
 
-import industriaSlider from "../../assets/img/imagenes-mastin/industria-slider.png";
+//import industriaSlider from "../../assets/img/imagenes-mastin/industria-slider.png";
 import industria001 from "../../assets/img/imagenes-mastin/Industria001.jpg";
 import industria002 from "../../assets/img/imagenes-mastin/Industria002.jpg";
 import industria003 from "../../assets/img/imagenes-mastin/Industria003.jpg";
 import industria004 from "../../assets/img/imagenes-mastin/Industria004.jpg";
 
-import filtroSlider from "../../assets/img/imagenes-mastin/filtros-slider.png";
+//import filtroSlider from "../../assets/img/imagenes-mastin/filtros-slider.png";
+import filtros005 from "../../assets/img/imagenes-mastin/Filtros005.jpg";
 import filtros001 from "../../assets/img/imagenes-mastin/Filtros001.jpg";
 import filtros003 from "../../assets/img/imagenes-mastin/Filtros003.jpg";
-import filtros005 from "../../assets/img/imagenes-mastin/Filtros005.jpg";
 
 const construccionImg = [
-  construccion001,
-  construccion002,
+  //construccion001,
   construccion003,
+  construccion002,
   construccion004,
 ];
 
-const filtrosImg = [filtroSlider, filtros001, filtros003, filtros005];
+const filtrosImg = [/* filtroSlider */ filtros005, filtros001, filtros003];
 
 const industriaImg = [
-  industriaSlider,
+  //industriaSlider,
   industria001,
   industria002,
   industria003,

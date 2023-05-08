@@ -7,11 +7,12 @@ const MainContainer = ({ children }) => {
 
   const fetchItems = async () => {
     try {
-      // const method = window.location.hostname ? "http" : "https";
+      const method =
+        window.location.hostname === "sql727.main-hosting.eu"
+          ? "http"
+          : "https";
       console.log(`${window.location.hostname}`);
-      const res = await axios.get(
-        `https://${window.location.hostname}/catalogo`
-      );
+      const res = await axios.get(`${method}://sql727.main-hosting.eu`);
       console.log(res.data);
       updateItems(res.data);
     } catch (err) {
@@ -28,6 +29,7 @@ const MainContainer = ({ children }) => {
       updateItems(data);
     } catch (err) {
       console.log(err);
+      ${method}://
       console.log("fallo el get");
     } */
   };

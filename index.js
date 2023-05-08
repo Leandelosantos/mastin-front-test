@@ -4,8 +4,12 @@ import mysql from "mysql2";
 import cors from "cors";
 import { loadEnv } from "vite";
 const app = express();
-
+const server = http.createServer(app);
 process.env = { ...process.env, ...loadEnv("", process.cwd()) };
+
+// Settings
+
+app.set("port", process.env.PORT || 3000);
 
 const db = mysql.createPool({
   connectionLimit: 10,
@@ -21,7 +25,7 @@ console.log("creo el pool");
 app.use(express.json());
 app.use(cors());
 
-app.get("/catalogo", (req, res) => {
+app.get("/", (req, res) => {
   const q = "SELECT * FROM Listado_Productos_2023";
   db.getConnection((err, conn) => {
     if (err) {
@@ -41,8 +45,7 @@ app.get("/catalogo", (req, res) => {
   });
 });
 
-const PORT = process.env.VITE_PORT;
-console.log(process.env.VITE_PORT);
-app.listen(PORT, () => {
-  console.log(`Connected to backend ${PORT}`);
+//const PORT = process.env.VITE_PORT;
+server.listen(app.get("port"), () => {
+  console.log(`Connected to backend ${app.get("port")}`);
 });
