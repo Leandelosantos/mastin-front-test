@@ -21,9 +21,9 @@ const MainContainer = ({ children }) => {
       console.log("fallo el get");
     } */
     try {
-      const method =
-        window.location.hostname === "localhost" ? "http" : "https";
-      const res = await fetch(`${method}://${window.location.hostname}:3000`);
+      // const method =
+      //   window.location.hostname === "localhost" ? "http" : "https";
+      const res = await fetch(`https://server-psi-bice-89.vercel.app/`);
       const data = await res.json();
       console.log(data);
       updateItems(data);
