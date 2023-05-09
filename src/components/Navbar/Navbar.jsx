@@ -7,7 +7,7 @@ import {
   WrapperNav,
   MenuContainer,
   LogoContainer,
-  MobileLinks,
+  LinksMobile,
   CategoriesLinks,
 } from "./components";
 
@@ -33,7 +33,7 @@ const Navbar = () => {
         {isOpen && (
           <div className="sideBar">
             <Hamburger toggled={isOpen} toggle={() => setOpen(!isOpen)} />
-            <MobileLinks>
+            <LinksMobile>
               <Link to={"/"} onClick={() => setOpen(!isOpen)}>
                 INICIO
               </Link>
@@ -65,7 +65,7 @@ const Navbar = () => {
                 CONTACTO
               </Link>
               <li>ESP | POR</li>
-            </MobileLinks>
+            </LinksMobile>
           </div>
         )}
       </div>

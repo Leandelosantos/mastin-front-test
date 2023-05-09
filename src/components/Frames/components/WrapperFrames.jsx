@@ -6,11 +6,12 @@ const WrapperFrames = styled.div`
   align-items: center;
   margin: 5% auto;
   width: auto;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  padding: 0 5%;
   gap: 30px;
 
-  @media (max-width: 600px) {
-    margin: 5% 4%;
+  @media (max-width: 900px) {
+    flex-flow: column wrap;
   }
 `;
 

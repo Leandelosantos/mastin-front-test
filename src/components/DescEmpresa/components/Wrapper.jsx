@@ -70,7 +70,7 @@ const Wrapper = styled.div`
     }
   }
   @media (max-width: 600px) {
-    padding: 4%;
+    padding: 5%;
     h2 {
       font-size: 28px;
       line-height: 35px;

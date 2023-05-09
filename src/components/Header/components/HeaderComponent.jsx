@@ -10,7 +10,7 @@ const HeaderComponent = styled.h2`
   font-weight: 300;
   font-family: "Roboto Condensed";
   font-size: 72px;
-  padding: 0 4%;
+  padding: 0 5%;
   line-height: 90px;
   text-align: center;
   color: #77cae7;
