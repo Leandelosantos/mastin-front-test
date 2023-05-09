@@ -10,7 +10,7 @@ const MainContainer = ({ children }) => {
       const method =
         window.location.hostname === "localhost" ? "http" : "https";
       console.log(`${window.location.hostname}`);
-      const res = await axios.get(`${method}://localhost:3000`);
+      const res = await axios.get(`${method}://${window.location.host}`);
       console.log(res.data);
       updateItems(res.data);
     } catch (err) {
