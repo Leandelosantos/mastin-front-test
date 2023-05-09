@@ -6,7 +6,7 @@ const MainContainer = ({ children }) => {
   const { updateItems } = useContext(AppContext);
 
   const fetchItems = async () => {
-    try {
+    /* try {
       const method =
         window.location.hostname === "localhost" ? "http" : "https";
       console.log(`${window.location.hostname}`);
@@ -17,19 +17,18 @@ const MainContainer = ({ children }) => {
       console.error(err);
       console.log(err);
       console.log("fallo el get");
-    }
-    /* try {
+    } */
+    try {
       const method =
         window.location.hostname === "localhost" ? "http" : "https";
-      const res = await fetch(`${method}://${window.location.hostname}:3306`);
+      const res = await fetch(`${method}://${window.location.hostname}:3000`);
       const data = await res.json();
       console.log(data);
       updateItems(data);
     } catch (err) {
       console.log(err);
-      ${method}://
       console.log("fallo el get");
-    } */
+    }
   };
 
   useEffect(() => {
