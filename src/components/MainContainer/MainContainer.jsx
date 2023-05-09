@@ -1,5 +1,5 @@
 import { useEffect, useContext, memo } from "react";
-import axios from "axios";
+//import axios from "axios";
 import { AppContext } from "../../context/AppContext";
 
 const MainContainer = ({ children }) => {
@@ -10,7 +10,9 @@ const MainContainer = ({ children }) => {
       const method =
         window.location.hostname === "localhost" ? "http" : "https";
       console.log(`${window.location.hostname}`);
-      const res = await axios.get(`${method}://${window.location.host}`);
+      const res = await axios.get(
+        `${method}://${window.location.hostname}:3000`
+      );
       console.log(res.data);
       updateItems(res.data);
     } catch (err) {
