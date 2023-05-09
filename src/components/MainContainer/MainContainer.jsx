@@ -6,26 +6,9 @@ const MainContainer = ({ children }) => {
   const { updateItems } = useContext(AppContext);
 
   const fetchItems = async () => {
-    /* try {
-      const method =
-        window.location.hostname === "localhost" ? "http" : "https";
-      console.log(`${window.location.hostname}`);
-      const res = await axios.get(
-        `${method}://${window.location.hostname}:3000`
-      );
-      console.log(res.data);
-      updateItems(res.data);
-    } catch (err) {
-      console.error(err);
-      console.log(err);
-      console.log("fallo el get");
-    } */
     try {
-      // const method =
-      //   window.location.hostname === "localhost" ? "http" : "https";
-      const res = await fetch(`https://server-psi-bice-89.vercel.app/`);
+      const res = await fetch(`https://server-mastin.vercel.app/`);
       const data = await res.json();
-      console.log(data);
       updateItems(data);
     } catch (err) {
       console.log(err);
