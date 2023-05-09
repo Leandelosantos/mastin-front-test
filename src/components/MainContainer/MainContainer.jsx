@@ -8,11 +8,9 @@ const MainContainer = ({ children }) => {
   const fetchItems = async () => {
     try {
       const method =
-        window.location.hostname === "sql727.main-hosting.eu"
-          ? "http"
-          : "https";
+        window.location.hostname === "localhost" ? "http" : "https";
       console.log(`${window.location.hostname}`);
-      const res = await axios.get(`${method}://sql727.main-hosting.eu`);
+      const res = await axios.get(`${method}://localhost:3000`);
       console.log(res.data);
       updateItems(res.data);
     } catch (err) {

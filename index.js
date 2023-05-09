@@ -17,13 +17,19 @@ const db = mysql.createPool({
   user: process.env.VITE_DB_USER,
   password: process.env.VITE_DB_PASSWORD,
   database: process.env.VITE_DB_DATABASE,
-  port: process.env.VITE_PORT,
+  //port: process.env.VITE_PORT,
 });
 
 console.log("creo el pool");
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+    methods: "GET",
+    allowedHeaders: "Content-Type",
+  })
+);
 
 app.get("/", (req, res) => {
   const q = "SELECT * FROM Listado_Productos_2023";
