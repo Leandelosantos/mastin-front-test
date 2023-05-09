@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "db.js",
+  "main": "index.js",
   "scripts": {
     "dev": "vite & nodemon index.js",
     "start": "vite & node index.js",
