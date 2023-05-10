@@ -4,7 +4,7 @@ const WrapperCollapse = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 444px;
+  width: 100%;
   height: auto;
   margin: 0 0 0 1%;
 

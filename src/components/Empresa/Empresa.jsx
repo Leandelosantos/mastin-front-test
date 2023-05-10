@@ -40,17 +40,6 @@ const Empresa = () => {
           compañía junto al respeto por nuestros colaboradores, proveedores y
           clientes, y el cuidado del medio ambiente.
         </p>
-        {/* <WrapperButton
-          onClick={() => setIsOpen(!isOpen)}
-          aria-controls="collapse-text"
-          aria-expanded={isOpen}
-        >
-          {isOpen ? (
-            <Imagen src={minusIcon} alt="icon" />
-          ) : (
-            <Imagen src={plusIcon} alt="icon" />
-          )}
-        </WrapperButton> */}
         <Collapse in={isOpen}>
           <p>
             Con los años, mas-tin se convirtió en una marca reconocida y comenzó

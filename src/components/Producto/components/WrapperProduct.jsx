@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const WrapperProduct = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-flow: column nowrap;
   font-family: "Inter";
@@ -11,8 +11,9 @@ const WrapperProduct = styled.div`
   font-size: 24px;
   line-height: 32px;
   color: #595959;
-  width: 444px;
-  min-height: 114px;
+  width: 100%;
+  padding-top: 5%;
+  min-height: 90px;
   max-height: fit-content;
   border-bottom: 2px solid #d12e1d;
   margin: 0 1%;
@@ -20,24 +21,25 @@ const WrapperProduct = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 160px;
-    width: 444px;
+    //gap: 160px;
+    width: 100%;
+
+    p {
+      margin-bottom: 0;
+    }
   }
   .collapse-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: auto;
+    width: 100%;
     height: auto;
-    margin: 0 0 0 2%;
+    margin: 1% 0 0 2%;
   }
 
   @media (max-width: 900px) {
     width: 100%;
     .product {
-      width: 100%;
-    }
-    .collapse-container {
       width: 100%;
     }
   }

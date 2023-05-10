@@ -7,6 +7,7 @@ const WrapperGrid = styled.div`
   justify-items: center;
   padding: 2% 4%;
   width: 100%;
+  column-gap: 33px;
   margin: auto;
   box-shadow: rgb(189, 190, 190) 0px 4px 6px -2px;
 
