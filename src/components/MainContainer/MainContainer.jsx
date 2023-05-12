@@ -7,7 +7,9 @@ const MainContainer = ({ children }) => {
 
   const fetchItems = async () => {
     try {
-      const res = await fetch(`https://server-mastin.vercel.app/`);
+      const res = await fetch(
+        `https://server-mastin-gdjf2htn7-leandelosantos.vercel.app/products`
+      );
       const data = await res.json();
       updateItems(data);
     } catch (err) {
