@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: flex-start;
   flex-flow: column nowrap;
-  margin: 10% 0 5% 0;
+  margin: 0;
   h2 {
     font-family: "Inter";
     font-style: normal;
