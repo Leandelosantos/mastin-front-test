@@ -6,6 +6,10 @@ import Home from "./Home";
 import Catalogo from "./Catalogo";
 import Contacto from "./Contacto";
 import Segmento from "./Segmentos";
+import ShowProducts from "./ABM/ShowProducts";
+import EditProducts from "./ABM/EditProducts";
+import CreateProduct from "./ABM/CreateProduct";
+import Login from "./ABM/Login";
 
 /* Componentes de Construcción*/
 import ButtonPlus from "./ButtonPlus";
@@ -43,4 +47,8 @@ export {
   Slider,
   MainContainer,
   Segmento,
+  ShowProducts,
+  EditProducts,
+  CreateProduct,
+  Login,
 };

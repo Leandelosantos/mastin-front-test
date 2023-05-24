@@ -3,13 +3,11 @@ import { useEffect, useContext, memo } from "react";
 import { AppContext } from "../../context/AppContext";
 
 const MainContainer = ({ children }) => {
-  const { updateItems } = useContext(AppContext);
-
+  const { updateItems, userLogged } = useContext(AppContext);
+  console.log(userLogged);
   const fetchItems = async () => {
     try {
-      const res = await fetch(
-        `https://server-mastin-gdjf2htn7-leandelosantos.vercel.app/products`
-      );
+      const res = await fetch(`https://server-mastin-abm.vercel.app/products`);
       const data = await res.json();
       updateItems(data);
     } catch (err) {

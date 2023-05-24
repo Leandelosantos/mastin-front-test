@@ -9,12 +9,13 @@ const AppContextProvider = ({ children }) => {
   const [itemsFiltros, setItemsFiltro] = useState([]);
   const [itemsIndustria, setItemsIndustria] = useState([]);
   const [itemsConstruccion, setItemsConstruccion] = useState([]);
+  const [userLogged, setUserLogged] = useState(false);
 
   const updateItems = (items) => {
     setItems(items);
   };
 
-//Se realiza el filtrado de los items de la Base de Datos y se los asigna a una variable para su uso
+  //Se realiza el filtrado de los items de la Base de Datos y se los asigna a una variable para su uso
   useEffect(() => {
     if (items && items.length > 0) {
       const filtro = items.filter((item) => item.SEGMENTO === "FILTROS");
@@ -43,6 +44,8 @@ const AppContextProvider = ({ children }) => {
         itemsFiltros,
         itemsIndustria,
         itemsConstruccion,
+        setUserLogged,
+        userLogged,
       }}
     >
       {children}

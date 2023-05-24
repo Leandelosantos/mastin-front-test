@@ -8,6 +8,10 @@ import {
   Footer,
   MainContainer,
   Segmento,
+  ShowProducts,
+  CreateProduct,
+  EditProducts,
+  Login,
 } from "./components";
 import AppContextProvider from "./context/AppContext";
 
@@ -27,6 +31,10 @@ function App() {
               <Route path="/catalogo" element={<Catalogo />} />
               <Route path="/segmento/:categoria" element={<Segmento />} />
               <Route path="/contacto" element={<Contacto />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/admin" element={<ShowProducts />} />
+              <Route path="/create" element={<CreateProduct />} />
+              <Route path="/edit/:id" element={<EditProducts />} />
             </Routes>
             {/* Se agregar el Footer en App, de este modo es accesible y compartido por los componentes ruteados arriba */}
             <Footer />
