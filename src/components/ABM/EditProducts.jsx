@@ -50,10 +50,12 @@ const EditProducts = () => {
   return (
     <>
       {userLogged ? (
-        <div>
-          <h3>Editar Producto</h3>
+        <div className="row">
+          <h3 className="mt-5 mb-3 m-auto d-flex justify-content-center">
+            Editar Producto
+          </h3>
           <form onSubmit={update}>
-            <div className="mb-3">
+            <div className="d-flex flex-column w-75 m-auto justify-content-center mb-3 mt-3">
               <label className="form-label">PRODUCTO</label>
               <input
                 value={producto}
@@ -91,16 +93,18 @@ const EditProducts = () => {
                 <option value="INDUSTRIA">INDUSTRIA</option>
               </select>
             </div>
-            <button
-              type="button"
-              onClick={() => navigate("/admin")}
-              className="btn btn-danger me-5"
-            >
-              Cancelar
-            </button>
-            <button type="submit" className="btn btn-primary">
-              Guardar
-            </button>
+            <div className="d-flex row justify-content-center m-auto mb-5 mt-5">
+              <button
+                type="button"
+                onClick={() => navigate("/admin")}
+                className="btn btn-danger w-25 me-5"
+              >
+                Cancelar
+              </button>
+              <button type="submit" className="btn btn-primary w-25">
+                Guardar
+              </button>
+            </div>
           </form>
         </div>
       ) : null}

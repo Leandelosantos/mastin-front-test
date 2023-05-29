@@ -3,8 +3,8 @@ import { useEffect, useContext, memo } from "react";
 import { AppContext } from "../../context/AppContext";
 
 const MainContainer = ({ children }) => {
-  const { updateItems, userLogged } = useContext(AppContext);
-  console.log(userLogged);
+  const { updateItems, setLanguage, text } = useContext(AppContext);
+
   const fetchItems = async () => {
     try {
       const res = await fetch(`https://server-mastin-abm.vercel.app/products`);
@@ -18,9 +18,10 @@ const MainContainer = ({ children }) => {
 
   useEffect(() => {
     fetchItems();
+    setLanguage("ESP");
   }, []);
 
-  return <div>{children}</div>;
+  return <>{text ? <div>{children}</div> : null}</>;
 };
 
 export default memo(MainContainer);

@@ -5,11 +5,11 @@ import { AppContext } from "../../context/AppContext";
 import { v4 as uuidv4 } from "uuid";
 
 const Catalogo = () => {
-  const { items } = useContext(AppContext);
+  const { items, text } = useContext(AppContext);
 
   return (
     <>
-      <Title>Catalogo</Title>
+      <Title>{text.catalogo}</Title>
       <WrapperGrid>
         {items.map((item) => {
           return <Producto item={item} key={uuidv4()} />;

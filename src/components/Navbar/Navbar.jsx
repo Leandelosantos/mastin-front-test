@@ -2,7 +2,7 @@ import logo from "../../assets/img/logo-mas-tin.png";
 import { Imagen, LinksMenu } from "../index";
 import Hamburger from "hamburger-react";
 import { Link } from "react-router-dom";
-import { memo, useState } from "react";
+import { memo, useState, useContext, useEffect } from "react";
 import {
   WrapperNav,
   MenuContainer,
@@ -10,9 +10,13 @@ import {
   LinksMobile,
   CategoriesLinks,
 } from "./components";
+import { AppContext } from "../../context/AppContext";
+import wordings from "../../wordings";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
+
+  const { setLanguage, text, language } = useContext(AppContext);
 
   return (
     // <header>
@@ -35,7 +39,7 @@ const Navbar = () => {
             <Hamburger toggled={isOpen} toggle={() => setOpen(!isOpen)} />
             <LinksMobile>
               <Link to={"/"} onClick={() => setOpen(!isOpen)}>
-                INICIO
+                {text.navbar.inicio}
               </Link>
               <Link to={"/empresa"} onClick={() => setOpen(!isOpen)}>
                 EMPRESA
@@ -62,9 +66,23 @@ const Navbar = () => {
                 </Link>
               </CategoriesLinks>
               <Link to={"/contacto"} onClick={() => setOpen(!isOpen)}>
-                CONTACTO
+                {text.navbar.contacto}
               </Link>
-              <li>ESP | POR</li>
+              <span
+                onClick={
+                  language === "ESP" ? () => {} : () => setLanguage("ESP")
+                }
+              >
+                ESP
+              </span>
+              {/* <span>|</span> */}
+              <span
+                onClick={
+                  language === "POR" ? () => {} : () => setLanguage("POR")
+                }
+              >
+                POR
+              </span>
             </LinksMobile>
           </div>
         )}

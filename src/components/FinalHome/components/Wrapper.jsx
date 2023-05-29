@@ -8,7 +8,6 @@ const Wrapper = styled.div`
   width: auto;
   padding: 5% 0;
   box-shadow: 0px 0px 6px 1px #bdbebe;
-  filter: drop-shadow(0px 4px 4px #bdbebe);
 
   .text {
     display: flex;

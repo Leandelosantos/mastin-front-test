@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
+import wordings from "../wordings";
 
 // Creacion de Contexto para la App
 export const AppContext = createContext();
@@ -10,6 +11,13 @@ const AppContextProvider = ({ children }) => {
   const [itemsIndustria, setItemsIndustria] = useState([]);
   const [itemsConstruccion, setItemsConstruccion] = useState([]);
   const [userLogged, setUserLogged] = useState(false);
+  const [language, setLanguage] = useState("ESP");
+  const [text, setText] = useState(null);
+
+  useEffect(() => {
+    const texts = wordings[language];
+    setText(texts);
+  }, [language]);
 
   const updateItems = (items) => {
     setItems(items);
@@ -46,6 +54,9 @@ const AppContextProvider = ({ children }) => {
         itemsConstruccion,
         setUserLogged,
         userLogged,
+        text,
+        setLanguage,
+        language,
       }}
     >
       {children}

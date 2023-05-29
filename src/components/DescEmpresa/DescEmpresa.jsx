@@ -1,24 +1,24 @@
 import { Imagen } from "../index";
 import empleados from "../../assets/img/img-empleados.png";
-import { memo } from "react";
+import { memo, useContext } from "react";
 import { Wrapper } from "./components";
+import { AppContext } from "../../context/AppContext";
 
 const DescEmpresa = () => {
+  const { text } = useContext(AppContext);
+
   return (
     <>
       <Wrapper>
-        <h2>
-          Contamos con el mejor equipo de profesionales para atender todas sus
-          consultas
-        </h2>
+        <h2>{text.descEmpresa.h1}</h2>
         <div className="secContainer">
           <Imagen src={empleados} alt="empleados" width={"auto"} />
           <ul>
-            <li>Desarrollo de productos a medida</li>
-            <li>Amplio conocimiento en procesos productivos</li>
-            <li>Soporte en todas las etapas del proyecto</li>
-            <li>Entrenamiento permanente a nuestros clientes</li>
-            <li>Innovacíon Constante</li>
+            <li>{text.descEmpresa.l1}</li>
+            <li>{text.descEmpresa.l2}</li>
+            <li>{text.descEmpresa.l3}</li>
+            <li>{text.descEmpresa.l4}</li>
+            <li>{text.descEmpresa.l5}</li>
           </ul>
         </div>
       </Wrapper>

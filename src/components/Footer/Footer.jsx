@@ -1,10 +1,13 @@
 import { Imagen } from "../index";
 import logo from "../../assets/img/logo-mas-tin.png";
 import { Link } from "react-router-dom";
-import { memo } from "react";
+import { memo, useContext } from "react";
 import { WrapperFooter, WrapperLinksFooter } from "./components";
+import { AppContext } from "../../context/AppContext";
 
 const Footer = () => {
+  const { text } = useContext(AppContext);
+
   return (
     <>
       <WrapperFooter>
@@ -12,10 +15,12 @@ const Footer = () => {
           <Link to={"/"}>
             <Imagen src={logo} alt="logo mas-tin" width={130} />
           </Link>
-          <p>Un mundo de soluciones</p>
+          <p>{text.footer}</p>
           <div className="footerBottom">
-            <p>Teléfono</p>
+            <p>Argentina</p>
             <p>+54 9 (11)2120-1700</p>
+            <p>Brasil</p>
+            <p>+55 (11)2481-2900</p>
           </div>
         </div>
         <WrapperLinksFooter>

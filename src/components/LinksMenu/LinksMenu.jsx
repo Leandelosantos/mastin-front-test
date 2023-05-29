@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
-import { memo } from "react";
+import { memo, useContext } from "react";
 import { WrapperLinks, DropdownLink, Pointer } from "./components";
+import { AppContext } from "../../context/AppContext";
 
 const LinksMenu = () => {
+  const { setLanguage, text, language } = useContext(AppContext);
+
   return (
     <WrapperLinks>
-      <Link to={"/"}>INICIO</Link>
+      <Link to={"/"}>{text.navbar.inicio}</Link>
       <Link to={"/empresa"}>EMPRESA</Link>
       <DropdownLink>
         CATALOGO
@@ -27,8 +30,14 @@ const LinksMenu = () => {
           </div>
         </div>
       </DropdownLink>
-      <Link to={"/contacto"}>CONTACTO</Link>
-      <li>ESP | POR</li>
+      <Link to={"/contacto"}>{text.navbar.contacto}</Link>
+      <span onClick={language === "ESP" ? () => {} : () => setLanguage("ESP")}>
+        ESP
+      </span>
+      <span>|</span>
+      <span onClick={language === "POR" ? () => {} : () => setLanguage("POR")}>
+        POR
+      </span>
     </WrapperLinks>
   );
 };

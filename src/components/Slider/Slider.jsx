@@ -11,11 +11,8 @@ const Slider = ({ imagenes }) => (
       modules={[Autoplay]}
       autoplay={{ delay: 3000 }}
       spaceBetween={100}
-      // width={"100%"}
       centeredSlides={true}
       slidesPerView={1}
-      //onSlideChange={() => console.log("slide change")}
-      //onSwiper={(swiper) => console.log(swiper)}
     >
       {imagenes.map((img) => (
         <SwiperSlide key={img}>

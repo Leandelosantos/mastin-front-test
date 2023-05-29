@@ -70,13 +70,13 @@ const ShowProducts = () => {
                       <td>
                         <Link
                           to={`/edit/${product.id}`}
-                          className="btn btn-info mb-5"
+                          className="btn btn-info w-75 mb-5"
                         >
                           Editar
                         </Link>
                         <button
                           onClick={() => deleteProduct(product.id)}
-                          className="btn btn-danger"
+                          className="btn btn-danger w-75"
                         >
                           Eliminar
                         </button>
