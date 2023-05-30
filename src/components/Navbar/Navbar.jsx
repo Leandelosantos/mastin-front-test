@@ -50,7 +50,7 @@ const Navbar = () => {
                   PRODUCTOS
                 </Link>
                 <Link to={"/segmento/filtros"} onClick={() => setOpen(!isOpen)}>
-                  FILTROS
+                  FILTROS - INDUSTRIA
                 </Link>
                 <Link
                   to={"/segmento/construccion"}
