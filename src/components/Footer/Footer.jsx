@@ -24,10 +24,10 @@ const Footer = () => {
           </div>
         </div>
         <WrapperLinksFooter>
-          <Link to={"/"}>INICIO</Link>
+          <Link to={"/"}>{text.navbar.inicio}</Link>
           <Link to={"/empresa"}>EMPRESA</Link>
           <Link to={"/catalogo"}>CATALOGO</Link>
-          <Link to={"/contacto"}>CONTACTO</Link>
+          <Link to={"/contacto"}>{text.navbar.contacto}</Link>
         </WrapperLinksFooter>
       </WrapperFooter>
     </>

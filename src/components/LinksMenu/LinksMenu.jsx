@@ -16,16 +16,22 @@ const LinksMenu = () => {
           <Pointer />
           <div className="dropdownContent">
             <div className="dropdownElement">
-              <Link to={"/catalogo"}>PRODUCTOS</Link>
+              <Link to={"/catalogo"}>{text.navbar.catalogo.item}</Link>
             </div>
             <div className="dropdownElement">
-              <Link to={"/segmento/filtros"}>FILTROS</Link>
+              <Link to={"/segmento/filtros-industria"}>
+                {text.navbar.catalogo.item1}
+              </Link>
             </div>
             <div className="dropdownElement">
-              <Link to={"/segmento/construccion"}>CONSTRUCCIÓN</Link>
+              <Link to={"/segmento/construccion"}>
+                {text.navbar.catalogo.item2}
+              </Link>
             </div>
             <div className="dropdownElement">
-              <Link to={"/segmento/industria"}>INDUSTRIA</Link>
+              <Link to={"/segmento/consumer-confort"}>
+                {text.navbar.catalogo.item3}
+              </Link>
             </div>
           </div>
         </div>

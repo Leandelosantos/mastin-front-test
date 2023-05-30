@@ -73,9 +73,9 @@ const CreateProduct = () => {
             onChange={(e) => setSegmento(e.target.value)}
           >
             <option value="-">-</option>
-            <option value="FILTROS">FILTROS</option>
+            <option value="FILTROS-INDUSTRIA">FILTROS-INDUSTRIA</option>
             <option value="CONSTRUCCION">CONSTRUCCION</option>
-            <option value="INDUSTRIA">INDUSTRIA</option>
+            <option value="CONSUMER CONFORT">CONSUMER CONFORT</option>
           </select>
         </div>
         <div className="d-flex row justify-content-center m-auto mb-5 mt-5">

@@ -3,6 +3,12 @@ const wordings = {
     navbar: {
       inicio: "INICIO",
       contacto: "CONTACTO",
+      catalogo: {
+        item: "PRODUCTOS",
+        item1: "FILTROS - INDUSTRIA",
+        item2: "CONSTRUCCION",
+        item3: "CONSUMER CONFORT",
+      },
     },
     header: {
       h1: "Innovación quimica para poliuretanos e impermeabilizantes",
@@ -37,6 +43,12 @@ const wordings = {
     navbar: {
       inicio: "HOME",
       contacto: "CONTATO",
+      catalogo: {
+        item: "PRODUTOS",
+        item1: "FILTROS - INDÚSTRIA",
+        item2: "CONSTRUÇÃO",
+        item3: "CONFORTO DO CONSUMIDOR",
+      },
     },
     header: {
       h1: "Inovação química para poliuretanos e impermeabilizantes",
