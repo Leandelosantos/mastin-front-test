@@ -2,7 +2,7 @@ import logo from "../../assets/img/logo-mas-tin.png";
 import { Imagen, LinksMenu } from "../index";
 import Hamburger from "hamburger-react";
 import { Link } from "react-router-dom";
-import { memo, useState, useContext, useEffect } from "react";
+import { memo, useState, useContext } from "react";
 import {
   WrapperNav,
   MenuContainer,
@@ -11,7 +11,6 @@ import {
   CategoriesLinks,
 } from "./components";
 import { AppContext } from "../../context/AppContext";
-import wordings from "../../wordings";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -47,22 +46,25 @@ const Navbar = () => {
               <span>CATALOGO</span>
               <CategoriesLinks>
                 <Link to={"/catalogo"} onClick={() => setOpen(!isOpen)}>
-                  PRODUCTOS
+                  {text.navbar.catalogo.item}
                 </Link>
-                <Link to={"/segmento/filtros"} onClick={() => setOpen(!isOpen)}>
-                  FILTROS
+                <Link
+                  to={"/segmento/filtros-industria"}
+                  onClick={() => setOpen(!isOpen)}
+                >
+                  {text.navbar.catalogo.item1}
                 </Link>
                 <Link
                   to={"/segmento/construccion"}
                   onClick={() => setOpen(!isOpen)}
                 >
-                  CONSTRUCCIÓN
+                  {text.navbar.catalogo.item2}
                 </Link>
                 <Link
-                  to={"/segmento/industria"}
+                  to={"/segmento/consumer-confort"}
                   onClick={() => setOpen(!isOpen)}
                 >
-                  INDUSTRIA
+                  {text.navbar.catalogo.item3}
                 </Link>
               </CategoriesLinks>
               <Link to={"/contacto"} onClick={() => setOpen(!isOpen)}>
@@ -75,7 +77,6 @@ const Navbar = () => {
               >
                 ESP
               </span>
-              {/* <span>|</span> */}
               <span
                 onClick={
                   language === "POR" ? () => {} : () => setLanguage("POR")
