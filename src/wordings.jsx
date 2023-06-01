@@ -13,7 +13,7 @@ const wordings = {
     frames: {
       filtrosIndustria: "../src/assets/img/Home-IndustriaFiltros.jpg",
       construccion: "../src/assets/img/Home-Construccion.jpg",
-      consumer: "../src/assets/img/ConsumerConfort.png",
+      consumer: "../src/assets/img/ConsumerConfort.jpg",
     },
     header: {
       home: "Innovación quimica para poliuretanos e impermeabilizantes",

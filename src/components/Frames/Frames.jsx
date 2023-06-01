@@ -1,5 +1,7 @@
 import { Imagen } from "../index";
 import { Link } from "react-router-dom";
+import filtros from "../../assets/img/Home-IndustriaFiltros.jpg";
+import filtrosPort from "../../assets/img/HomePort-IndustriaFiltrosjpg.jpg";
 import { memo, useContext } from "react";
 import { WrapperFrames } from "./components";
 import { AppContext } from "../../context/AppContext";
@@ -12,7 +14,7 @@ const Frames = () => {
       <WrapperFrames>
         <Link to={"segmento/filtros-industria"}>
           <Imagen
-            src={text.frames.filtrosIndustria}
+            src={text === "ESP" ? filtros : filtrosPort}
             alt="filtros"
             width={"100%"}
           />
