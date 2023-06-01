@@ -88,8 +88,8 @@ const EditProducts = () => {
                 className="form-select"
                 onChange={(e) => setSegmento(e.target.value)}
               >
-                <option value="FILTROS-INDUSTRIA">FILTROS-INDUSTRIA</option>
-                <option value="CONSTRUCCION">CONSTRUCCION</option>
+                <option value="FILTROS">FILTROS-INDUSTRIA</option>
+                <option value="CONSTRUCCIÓN">CONSTRUCCION</option>
                 <option value="CONSUMER CONFORT">CONSUMER CONFORT</option>
               </select>
             </div>

@@ -10,8 +10,17 @@ const wordings = {
         item3: "CONSUMER CONFORT",
       },
     },
+    frames: {
+      filtrosIndustria: "../src/assets/img/Home-IndustriaFiltros.jpg",
+      construccion: "../src/assets/img/Home-Construccion.jpg",
+      consumer: "../src/assets/img/ConsumerConfort.jpg",
+    },
     header: {
-      h1: "Innovación quimica para poliuretanos e impermeabilizantes",
+      home: "Innovación quimica para poliuretanos e impermeabilizantes",
+      filtrosIndustria: "Amplia gama de insumos para filtros e industria",
+      construccion:
+        "Materiales de alta calidad para el área de la construcción",
+      consumer: "Ofrecemos soluciones en PU a la medida de su industria",
     },
     descEmpresa: {
       h1: "Contamos con el mejor equipo de profesionales para atender todas sus consultas",
@@ -50,8 +59,16 @@ const wordings = {
         item3: "CONFORTO DO CONSUMIDOR",
       },
     },
+    frames: {
+      filtrosIndustria: "../src/assets/img/HomePort-IndustriaFiltrosjpg.jpg",
+      construccion: "../src/assets/img/HomePort-Construccion.jpg",
+      consumer: "../src/assets/img/ConfortoDoConsumidor.jpg",
+    },
     header: {
-      h1: "Inovação química para poliuretanos e impermeabilizantes",
+      home: "Inovação química para poliuretanos e impermeabilizantes",
+      filtrosIndustria: "Ampla gama de insumos para filtros e indústria",
+      construccion: "Materiais de alta qualidade para a área da construção",
+      consumer: "Oferecemos soluções em PU á medida para sua industria",
     },
     descEmpresa: {
       h1: "Temos a melhor equipe de profissionais para responder a todas as suas consultas.",

@@ -1,5 +1,4 @@
-import logoDow from "../../assets/img/logo-dow.png";
-import logoDow2 from "../../assets/img/logo-dow2.png";
+import logoDow from "../../assets/img/logo-dow2.png";
 import { memo, useContext } from "react";
 import { Wrapper } from "./components";
 import { Imagen } from "../index";
@@ -16,7 +15,7 @@ const FinalHome = () => {
           <p>{text.finalHome.p}</p>
         </div>
         <div className="brands">
-          <Imagen src={logoDow2} alt="marca" width={"auto"} />
+          <Imagen src={logoDow} alt="marca" width={"auto"} />
         </div>
       </Wrapper>
     </>
