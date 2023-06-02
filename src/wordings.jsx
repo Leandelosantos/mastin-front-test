@@ -13,7 +13,7 @@ const wordings = {
     frames: {
       filtrosIndustria: "../src/assets/img/Home-IndustriaFiltros.jpg",
       construccion: "../src/assets/img/Home-Construccion.jpg",
-      consumer: "../src/assets/img/ConsumerConfort.jpg",
+      consumer: "../../assets/img/ConsumerConfort.jpg",
     },
     header: {
       home: "Innovación quimica para poliuretanos e impermeabilizantes",
@@ -62,7 +62,7 @@ const wordings = {
     frames: {
       filtrosIndustria: "../src/assets/img/HomePort-IndustriaFiltrosjpg.jpg",
       construccion: "../src/assets/img/HomePort-Construccion.jpg",
-      consumer: "../src/assets/img/ConfortoDoConsumidor.jpg",
+      consumer: "../../assets/img/ConfortoDoConsumidor.jpg",
     },
     header: {
       home: "Inovação química para poliuretanos e impermeabilizantes",

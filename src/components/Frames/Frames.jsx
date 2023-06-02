@@ -15,7 +15,7 @@ const Frames = () => {
         <Link to={"segmento/filtros-industria"}>
           <Imagen
             src={text ? filtros : filtrosPort}
-            alt="filtros"
+            alt="filtros-industria"
             width={"100%"}
           />
         </Link>
@@ -27,7 +27,11 @@ const Frames = () => {
           />
         </Link>
         <Link to={"segmento/consumer-confort"}>
-          <Imagen src={text.frames.consumer} alt="industria" width={"100%"} />
+          <Imagen
+            src={text.frames.consumer}
+            alt="consumer confort"
+            width={"100%"}
+          />
         </Link>
       </WrapperFrames>
     </>
