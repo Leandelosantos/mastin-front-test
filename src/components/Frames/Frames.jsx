@@ -8,13 +8,13 @@ import { AppContext } from "../../context/AppContext";
 
 const Frames = () => {
   const { text } = useContext(AppContext);
-
+  console.log(text);
   return (
     <>
       <WrapperFrames>
         <Link to={"segmento/filtros-industria"}>
           <Imagen
-            src={text === "ESP" ? filtros : filtrosPort}
+            src={text ? filtros : filtrosPort}
             alt="filtros"
             width={"100%"}
           />
