@@ -5,13 +5,14 @@ import swal from "sweetalert";
 import { AppContext } from "../../context/AppContext";
 
 const URI = "https://server-mastin-abm.vercel.app/products";
+URIport = "https://server-mastin-abm.vercel.app/productsPort";
 
 const EditProducts = () => {
   const [producto, setProducto] = useState("");
   const [descripcion, setDescripcion] = useState("");
   const [presentacion, setPresentacion] = useState("");
   const [segmento, setSegmento] = useState("");
-  const { userLogged } = useContext(AppContext);
+  const { userLogged, language, text } = useContext(AppContext);
 
   const navigate = useNavigate();
 
@@ -21,14 +22,25 @@ const EditProducts = () => {
 
   const update = async (e) => {
     e.preventDefault();
-    await axios.put(`${URI}/${id}`, {
-      PRODUCTO: producto,
-      DESCRIPCION: descripcion,
-      PRESENTACI_N: presentacion,
-      SEGMENTO: segmento,
-    });
-    swal("Listo!", "Tu producto ha sido editado!", "success");
-    navigate("/admin");
+    if (language === "ESP") {
+      await axios.put(`${URI}/${id}`, {
+        PRODUCTO: producto,
+        DESCRIPCION: descripcion,
+        PRESENTACI_N: presentacion,
+        SEGMENTO: segmento,
+      });
+      swal("Listo!", "Tu producto ha sido editado!", "success");
+      navigate("/admin");
+    } else {
+      await axios.put(`${URIport}/${id}`, {
+        PRODUCTO: producto,
+        DESCRIPCION: descripcion,
+        PRESENTACI_N: presentacion,
+        SEGMENTO: segmento,
+      });
+      swal("Listo!", "Tu producto ha sido editado!", "success");
+      navigate("/admin");
+    }
   };
 
   useEffect(() => {
@@ -40,11 +52,19 @@ const EditProducts = () => {
   }, []);
 
   const getProductById = async () => {
-    const res = await axios.get(`${URI}/${id}`);
-    setProducto(res.data.PRODUCTO);
-    setDescripcion(res.data.DESCRIPCION);
-    setPresentacion(res.data.PRESENTACI_N);
-    setSegmento(res.data.SEGMENTO);
+    if (language === "ESP") {
+      const res = await axios.get(`${URI}/${id}`);
+      setProducto(res.data.PRODUCTO);
+      setDescripcion(res.data.DESCRIPCION);
+      setPresentacion(res.data.PRESENTACI_N);
+      setSegmento(res.data.SEGMENTO);
+    } else {
+      const res = await axios.get(`${URIport}/${id}`);
+      setProducto(res.data.PRODUCTO);
+      setDescripcion(res.data.DESCRIPCION);
+      setPresentacion(res.data.PRESENTACI_N);
+      setSegmento(res.data.SEGMENTO);
+    }
   };
 
   return (
@@ -88,9 +108,15 @@ const EditProducts = () => {
                 className="form-select"
                 onChange={(e) => setSegmento(e.target.value)}
               >
-                <option value="FILTROS">FILTROS-INDUSTRIA</option>
-                <option value="CONSTRUCCIÓN">CONSTRUCCION</option>
-                <option value="CONSUMER CONFORT">CONSUMER CONFORT</option>
+                <option value={text.navbar.catalogo.item1}>
+                  {text.navbar.catalogo.item1}
+                </option>
+                <option value={text.navbar.catalogo.item2}>
+                  {text.navbar.catalogo.item2}
+                </option>
+                <option value={text.navbar.catalogo.item3}>
+                  {text.navbar.catalogo.item3}
+                </option>
               </select>
             </div>
             <div className="d-flex row justify-content-center m-auto mb-5 mt-5">

@@ -16,8 +16,6 @@ const Login = () => {
   const login = async (e) => {
     e.preventDefault;
     try {
-      console.log("entre a login");
-
       const res = await axios.post(URI, {
         user,
         pass: md5(pass),

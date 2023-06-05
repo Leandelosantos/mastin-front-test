@@ -19,17 +19,17 @@ const LinksMenu = () => {
               <Link to={"/catalogo"}>{text.navbar.catalogo.item}</Link>
             </div>
             <div className="dropdownElement">
-              <Link to={"/segmento/filtros-industria"}>
+              <Link to={text.navbar.segmentos.filtros}>
                 {text.navbar.catalogo.item1}
               </Link>
             </div>
             <div className="dropdownElement">
-              <Link to={"/segmento/construccion"}>
+              <Link to={text.navbar.segmentos.construccion}>
                 {text.navbar.catalogo.item2}
               </Link>
             </div>
             <div className="dropdownElement">
-              <Link to={"/segmento/consumer-confort"}>
+              <Link to={text.navbar.segmentos.consumer}>
                 {text.navbar.catalogo.item3}
               </Link>
             </div>

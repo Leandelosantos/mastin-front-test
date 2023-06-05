@@ -5,15 +5,19 @@ import { AppContext } from "../../context/AppContext";
 import { v4 as uuidv4 } from "uuid";
 
 const Catalogo = () => {
-  const { items, text } = useContext(AppContext);
+  const { items, text, itemsPort, language } = useContext(AppContext);
 
   return (
     <>
       <Title>{text.catalogo}</Title>
       <WrapperGrid>
-        {items.map((item) => {
-          return <Producto item={item} key={uuidv4()} />;
-        })}
+        {language === "ESP"
+          ? items.map((item) => {
+              return <Producto item={item} key={uuidv4()} />;
+            })
+          : itemsPort.map((item) => {
+              return <Producto item={item} key={uuidv4()} />;
+            })}
       </WrapperGrid>
     </>
   );

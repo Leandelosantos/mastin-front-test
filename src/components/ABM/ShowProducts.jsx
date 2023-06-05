@@ -5,9 +5,19 @@ import swal from "sweetalert";
 import { AppContext } from "../../context/AppContext";
 
 const URI = "https://server-mastin-abm.vercel.app/products";
+const URIport = "https://server-mastin-abm.vercel.app/productsPort";
 
 const ShowProducts = () => {
-  const { userLogged, updateItems, items } = useContext(AppContext);
+  const {
+    userLogged,
+    updateItems,
+    updateItemsPort,
+    items,
+    itemsPort,
+    text,
+    language,
+  } = useContext(AppContext);
+
   const navigate = useNavigate();
 
   /* const cookieValue = document.cookie
@@ -24,19 +34,33 @@ const ShowProducts = () => {
       navigate("/login");
     }
   }, []);
+
   // Procedimiento para mostrar todos los productos
 
   const getProducts = async () => {
-    const res = await axios.get(URI);
-    updateItems(res.data);
+    if (language === "ESP") {
+      const res = await axios.get(URI);
+      updateItems(res.data);
+      console.log(res.data);
+    } else {
+      const res = await axios.get(URIport);
+      updateItemsPort(res.data);
+      console.log(res.data);
+    }
   };
 
   // Procedimiento para eliminar un producto
 
   const deleteProduct = async (id) => {
-    await axios.delete(`${URI}/${id}`);
-    getProducts();
-    swal("Listo!", "Tu producto ha sido eliminado!", "success");
+    if (language === "ESP") {
+      await axios.delete(`${URI}/${id}`);
+      getProducts();
+      swal("Listo!", "Tu producto ha sido eliminado!", "success");
+    } else {
+      await axios.delete(`${URIport}/${id}`);
+      getProducts();
+      swal("Listo!", "Tu producto ha sido eliminado!", "success");
+    }
   };
 
   return (
@@ -59,7 +83,7 @@ const ShowProducts = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {items.map((product) => (
+                  {(language === "ESP" ? items : itemsPort).map((product) => (
                     <tr key={product.id}>
                       <td>{product.PRODUCTO}</td>
                       <td>{product.DESCRIPCION}</td>

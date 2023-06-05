@@ -49,19 +49,19 @@ const Navbar = () => {
                   {text.navbar.catalogo.item}
                 </Link>
                 <Link
-                  to={"/segmento/filtros-industria"}
+                  to={text.navbar.segmentos.filtros}
                   onClick={() => setOpen(!isOpen)}
                 >
                   {text.navbar.catalogo.item1}
                 </Link>
                 <Link
-                  to={"/segmento/construccion"}
+                  to={text.navbar.segmentos.construccion}
                   onClick={() => setOpen(!isOpen)}
                 >
                   {text.navbar.catalogo.item2}
                 </Link>
                 <Link
-                  to={"/segmento/consumer-confort"}
+                  to={text.navbar.segmentos.consumer}
                   onClick={() => setOpen(!isOpen)}
                 >
                   {text.navbar.catalogo.item3}

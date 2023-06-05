@@ -5,13 +5,14 @@ import swal from "sweetalert";
 import { AppContext } from "../../context/AppContext";
 
 const URI = "https://server-mastin-abm.vercel.app/products";
+const URIport = `https://server-mastin-abm.vercel.app/productsPort`;
 
 const CreateProduct = () => {
   const [producto, setProducto] = useState("");
   const [descripcion, setDescripcion] = useState("");
   const [presentacion, setPresentacion] = useState("");
   const [segmento, setSegmento] = useState("");
-  const { userLogged } = useContext(AppContext);
+  const { userLogged, language, text } = useContext(AppContext);
 
   const navigate = useNavigate();
 
@@ -20,18 +21,30 @@ const CreateProduct = () => {
       navigate("/login");
     }
   }, []);
+
   //Procedimiento guardar
 
   const store = async (e) => {
     e.preventDefault();
-    await axios.post(URI, {
-      PRODUCTO: producto,
-      DESCRIPCION: descripcion,
-      PRESENTACI_N: presentacion,
-      SEGMENTO: segmento,
-    });
-    swal("Listo!", "Tu producto ha sido guardado!", "success");
-    navigate("/admin");
+    if (language === "ESP") {
+      await axios.post(URI, {
+        PRODUCTO: producto,
+        DESCRIPCION: descripcion,
+        PRESENTACI_N: presentacion,
+        SEGMENTO: segmento,
+      });
+      swal("Listo!", "Tu producto ha sido guardado!", "success");
+      navigate("/admin");
+    } else {
+      await axios.post(URIport, {
+        PRODUCTO: producto,
+        DESCRIPCION: descripcion,
+        PRESENTACI_N: presentacion,
+        SEGMENTO: segmento,
+      });
+      swal("Listo!", "Tu producto ha sido guardado!", "success");
+      navigate("/admin");
+    }
   };
 
   return (
@@ -72,10 +85,16 @@ const CreateProduct = () => {
             className="form-select"
             onChange={(e) => setSegmento(e.target.value)}
           >
-            <option value="-">-</option>
-            <option value="FILTROS-INDUSTRIA">FILTROS-INDUSTRIA</option>
-            <option value="CONSTRUCCION">CONSTRUCCION</option>
-            <option value="CONSUMER CONFORT">CONSUMER CONFORT</option>
+            <option value={null}>-</option>
+            <option value={text.navbar.catalogo.item1}>
+              {text.navbar.catalogo.item1}
+            </option>
+            <option value={text.navbar.catalogo.item2}>
+              {text.navbar.catalogo.item2}
+            </option>
+            <option value={text.navbar.catalogo.item3}>
+              {text.navbar.catalogo.item3}
+            </option>
           </select>
         </div>
         <div className="d-flex row justify-content-center m-auto mb-5 mt-5">

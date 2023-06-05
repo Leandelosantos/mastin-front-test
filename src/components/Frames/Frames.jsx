@@ -8,7 +8,7 @@ import { AppContext } from "../../context/AppContext";
 
 const Frames = () => {
   const { text } = useContext(AppContext);
-  console.log(text);
+
   return (
     <>
       <WrapperFrames>

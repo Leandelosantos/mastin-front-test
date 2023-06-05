@@ -39,14 +39,22 @@ const filtrosImg = [
 const consumerImg = [consume001, consume002, consume003];
 
 const Segmento = () => {
-  const { itemsFiltrosIndustria, itemsConstruccion, itemsConsumer } =
-    useContext(AppContext);
+  const {
+    itemsFiltrosIndustria,
+    itemsConstruccion,
+    itemsConsumer,
+    itemsFiltrosIndustriaPort,
+    itemsConstruccionPort,
+    itemsConsumerPort,
+    language,
+  } = useContext(AppContext);
   const [products, setProducts] = useState([]);
   const [segmentImgs, setSegmentImgs] = useState([]);
   const [segmentTitle, setSegmentTitle] = useState("");
 
   const { categoria } = useParams();
 
+  //Español
   useEffect(() => {
     if (categoria === "filtros-industria") {
       setProducts(itemsFiltrosIndustria);
@@ -63,7 +71,36 @@ const Segmento = () => {
       setSegmentTitle("Ofrecemos soluciones en PU a la medida de su industria");
       setSegmentImgs(consumerImg);
     }
-  }, [categoria, itemsFiltrosIndustria, itemsConstruccion, itemsConsumer]);
+  }, [
+    categoria,
+    itemsFiltrosIndustria,
+    itemsConstruccion,
+    itemsConsumer,
+    language,
+  ]);
+
+  //Portugues
+  useEffect(() => {
+    if (categoria === "filtros-indústria") {
+      setProducts(itemsFiltrosIndustriaPort);
+      setSegmentTitle("Amplia gama de insumos para filtros e indústria");
+      setSegmentImgs(filtrosImg);
+    } else if (categoria === "construçao") {
+      setProducts(itemsConstruccionPort);
+      setSegmentTitle("Materiais de alta qualidade para a área da construção");
+      setSegmentImgs(construccionImg);
+    } else if (categoria === "conforto-do-consumidor") {
+      setProducts(itemsConsumerPort);
+      setSegmentTitle("Oferecemos soluções em PU á medida para sua industria");
+      setSegmentImgs(consumerImg);
+    }
+  }, [
+    categoria,
+    itemsFiltrosIndustriaPort,
+    itemsConstruccionPort,
+    itemsConsumerPort,
+    language,
+  ]);
 
   return (
     <>

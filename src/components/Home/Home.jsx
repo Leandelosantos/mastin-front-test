@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <>
       <Slider imagenes={imgHome} />
-      <Header text={text.header.h1} />
+      <Header text={text.header.home} />
       <Frames />
       <DescEmpresa />
       <FinalHome />
