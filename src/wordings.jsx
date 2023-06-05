@@ -6,13 +6,13 @@ const wordings = {
       catalogo: {
         item: "PRODUCTOS",
         item1: "FILTROS-INDUSTRIA",
-        item2: "CONSTRUCCION",
+        item2: "CONSTRUCCIÓN",
         item3: "CONSUMER CONFORT",
       },
       segmentos: {
-        filtros: "/segmento/filtros-industria",
-        construccion: "/segmento/construccion",
-        consumer: "/segmento/consumer-confort",
+        filtros: "segmento/filtros-industria",
+        construccion: "segmento/construccion",
+        consumer: "segmento/consumer-confort",
       },
     },
     frames: {
@@ -64,9 +64,9 @@ const wordings = {
         item3: "CONFORTO DO CONSUMIDOR",
       },
       segmentos: {
-        filtros: "/segmento/filtros-indústria",
-        construccion: "/segmento/construçao",
-        consumer: "/segmento/conforto-do-consumidor",
+        filtros: "segmento/filtros-indústria",
+        construccion: "segmento/construçao",
+        consumer: "segmento/conforto-do-consumidor",
       },
     },
     frames: {

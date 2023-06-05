@@ -10,6 +10,17 @@ const WrapperFrames = styled.div`
   padding: 0 5%;
   gap: 30px;
 
+  a {
+    text-decoration: none;
+    color: rgb(89, 89, 89);
+  }
+  p {
+    margin-bottom: 0.5rem;
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 400;
+  }
+
   @media (max-width: 900px) {
     flex-flow: column wrap;
   }
