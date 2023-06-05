@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useEffect, memo, useContext } from "react";
+import { useEffect, memo, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 import { AppContext } from "../../context/AppContext";

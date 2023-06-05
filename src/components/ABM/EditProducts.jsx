@@ -108,8 +108,11 @@ const EditProducts = () => {
                 className="form-select"
                 onChange={(e) => setSegmento(e.target.value)}
               >
-                <option value={text.navbar.catalogo.item1}>
-                  {text.navbar.catalogo.item1}
+                <option value={text.navbar.catalogo.item4}>
+                  {text.navbar.catalogo.item4}
+                </option>
+                <option value={text.navbar.catalogo.item5}>
+                  {text.navbar.catalogo.item5}
                 </option>
                 <option value={text.navbar.catalogo.item2}>
                   {text.navbar.catalogo.item2}

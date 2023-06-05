@@ -8,6 +8,8 @@ const wordings = {
         item1: "FILTROS-INDUSTRIA",
         item2: "CONSTRUCCIÓN",
         item3: "CONSUMER CONFORT",
+        item4: "FILTROS",
+        item5: "INDUSTRIA",
       },
       segmentos: {
         filtros: "segmento/filtros-industria",
@@ -62,6 +64,8 @@ const wordings = {
         item1: "FILTROS-INDÚSTRIA",
         item2: "CONSTRUÇÃO",
         item3: "CONFORTO DO CONSUMIDOR",
+        item4: "FILTROS",
+        item5: "INDÚSTRIA",
       },
       segmentos: {
         filtros: "segmento/filtros-indústria",
