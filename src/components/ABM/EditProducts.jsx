@@ -5,7 +5,7 @@ import swal from "sweetalert";
 import { AppContext } from "../../context/AppContext";
 
 const URI = "https://server-mastin-abm.vercel.app/products";
-URIport = "https://server-mastin-abm.vercel.app/productsPort";
+const URIport = "https://server-mastin-abm.vercel.app/productsPort";
 
 const EditProducts = () => {
   const [producto, setProducto] = useState("");
