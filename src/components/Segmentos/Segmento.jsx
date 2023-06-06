@@ -110,7 +110,7 @@ const Segmento = () => {
         {products.map((product) => {
           return <Producto item={product} key={product.PRODUCTO} />;
         })}
-        {console.log(products)}
+        {/* {console.log(products)} */}
       </WrapperGrid>
     </>
   );

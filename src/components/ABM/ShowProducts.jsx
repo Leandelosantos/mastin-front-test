@@ -41,11 +41,9 @@ const ShowProducts = () => {
     if (language === "ESP") {
       const res = await axios.get(URI);
       updateItems(res.data);
-      console.log(res.data);
     } else {
       const res = await axios.get(URIport);
       updateItemsPort(res.data);
-      console.log(res.data);
     }
   };
 
