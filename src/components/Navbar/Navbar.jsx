@@ -84,6 +84,7 @@ const Navbar = () => {
               >
                 POR
               </span>
+              <Link to={"/login"}>Login</Link>
             </LinksMobile>
           </div>
         )}

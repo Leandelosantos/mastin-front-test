@@ -44,6 +44,7 @@ const LinksMenu = () => {
       <span onClick={language === "POR" ? () => {} : () => setLanguage("POR")}>
         POR
       </span>
+      <Link to={"/login"}>Login</Link>
     </WrapperLinks>
   );
 };
