@@ -23,7 +23,7 @@ const Contacto = () => {
         </div>
         <div className="country">
           <h2>Brasil</h2>
-          <p>Endereço: Av. Mario Covas Jr. 2605.</p>
+          <p>Endereço: Av. Governador Mario Covas Júnior, N. 2605</p>
           <p>Condomínio Dellapar I - Arujá.</p>
           <p>Sao Paulo, Brasil, CEP 07412-000</p>
           <p>Telefone: +55(11)2481-2900</p>
