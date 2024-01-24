@@ -7,7 +7,7 @@ const Contacto = () => {
       <WrapperContact>
         <div className="country">
           <h2>Argentina</h2>
-          <p>Dirección: Calle 24 (Anastasio Lanz) 2890.</p>
+          <p>Dirección: Calle 23 (Anastasio Lanz) 2890.</p>
           <p>Mini Parque Industrial Vergara, Berazategui.</p>
           <p>CP1884, Buenos Aires, Argentina.</p>
           <p>Teléfono: +54 (11) 2120-7200</p>
